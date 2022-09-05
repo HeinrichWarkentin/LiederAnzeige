@@ -31,21 +31,58 @@ namespace LiederAnzeige
         private void textgrößenSteuerungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ansichtToolStripMenuItem.DropDown.Visible = true;
+            
+            if (textgrößenSteuerungToolStripMenuItem.Checked)
+            {
+                gb_schrift.Visible = true;
+            }
+            else
+            {
+                gb_schrift.Visible = false;
+            }
+            
         }
 
         private void liveInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ansichtToolStripMenuItem.DropDown.Visible = true;
+
+            if (liveInfoToolStripMenuItem.Checked)
+            {
+                gb_live_info.Visible = true;
+            }
+            else
+            {
+                gb_live_info.Visible = false;
+            }
         }
 
         private void einfacheFoliensteuerungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ansichtToolStripMenuItem.DropDown.Visible = true;
+
+            if (einfacheFoliensteuerungToolStripMenuItem.Checked)
+            {
+                gb_folien_einfach.Visible = true;
+            }
+            else
+            {
+                gb_folien_einfach.Visible = false;
+            }
         }
 
         private void erweiterteFoliensteuerungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ansichtToolStripMenuItem.DropDown.Visible = true;
+
+            if (erweiterteFoliensteuerungToolStripMenuItem.Checked)
+            {
+                gb_folien_erweitert.Visible = true;
+            }
+            else
+            {
+                gb_folien_erweitert.Visible = false;
+            }
         }
     }
 }
