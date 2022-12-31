@@ -17,3 +17,4 @@ C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederA
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.csproj.CoreCompileInputs.cache
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.exe
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.pdb
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.MainForm.resources
