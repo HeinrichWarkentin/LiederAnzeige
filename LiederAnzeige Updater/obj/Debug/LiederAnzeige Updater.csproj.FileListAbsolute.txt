@@ -1,0 +1,27 @@
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.AssemblyReference.cache
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige_Updater.MainForm.resources
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige_Updater.Properties.Resources.resources
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.GenerateResource.cache
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.CoreCompileInputs.cache
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\bin\Debug\LiederAnzeige Updater.exe.config
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\bin\Debug\LiederAnzeige Updater.exe
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\bin\Debug\LiederAnzeige Updater.pdb
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.exe
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.pdb
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Heinrich\Desktop\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.CopyComplete
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\bin\Debug\LiederAnzeige Updater.exe.config
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\bin\Debug\LiederAnzeige Updater.exe
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\bin\Debug\LiederAnzeige Updater.pdb
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.AssemblyReference.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.SuggestedBindingRedirects.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige_Updater.MainForm.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige_Updater.Properties.Resources.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.GenerateResource.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.CoreCompileInputs.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.csproj.CopyComplete
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.exe
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige Updater\obj\Debug\LiederAnzeige Updater.pdb

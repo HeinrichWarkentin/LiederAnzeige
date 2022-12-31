@@ -16,7 +16,7 @@ namespace LiederAnzeige
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hauptfenster());
+            Application.Run(new Form1());
         }
     }
 }

@@ -1,0 +1,2 @@
+﻿31.12.2022 14:51:11 Info: Abfrage auf https://api.github.com/repos/HeinrichWarkentin/LiederAnzeige/releases/latest erfolgreich
+31.12.2022 14:51:16 Info: Abfrage auf https://api.github.com/repos/HeinrichWarkentin/LiederAnzeige/releases/latest erfolgreich

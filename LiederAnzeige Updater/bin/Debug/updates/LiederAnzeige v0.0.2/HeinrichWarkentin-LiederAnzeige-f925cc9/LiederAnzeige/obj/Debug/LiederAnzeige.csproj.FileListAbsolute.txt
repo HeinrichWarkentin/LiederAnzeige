@@ -1,0 +1,10 @@
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\LiederAnzeige.exe.config
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\LiederAnzeige.exe
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\LiederAnzeige.pdb
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.csproj.AssemblyReference.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.Hauptfenster.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.Properties.Resources.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.csproj.GenerateResource.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.csproj.CoreCompileInputs.cache
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.exe
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.pdb

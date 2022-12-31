@@ -1,0 +1,1 @@
+﻿26.11.2022 21:19:42 Info: Abfrage auf https://api.github.com/repos/HeinrichWarkentin/LiederAnzeige/releases/latest erfolgreich
