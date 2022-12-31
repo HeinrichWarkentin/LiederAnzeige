@@ -14,6 +14,8 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.IO;
 using System.IO.Compression;
+using static System.Net.WebRequestMethods;
+using System.Diagnostics;
 
 namespace LiederAnzeige_Updater
 {
@@ -260,7 +262,12 @@ namespace LiederAnzeige_Updater
 
         private void bt_installiereUpdates_Click(object sender, EventArgs e)
         {
-            updates_herunterladen_und_installieren();
+            DialogResult warnung_das_progamm_geschlossen_wird = MessageBox.Show("Achtung die LiederAnzeige wird während der Installation geschlossen, führen Sie das Update nicht während dem Livebetrieb durch. Soll die Installation gestartet werden?","Hinweis", MessageBoxButtons.YesNo);
+            if (warnung_das_progamm_geschlossen_wird == DialogResult.Yes)
+            {
+                updates_herunterladen_und_installieren();
+            }
+            
         }
 
         private void zeigeInfo(string text)
@@ -274,17 +281,17 @@ namespace LiederAnzeige_Updater
             lb_info.Visible = false;
             pB_ichArbeite.Visible = true;
             pB_ichArbeite.Value = 1;
-            string downloadLink = root.zipball_url;
+            string downloadLink = "https://github.com/HeinrichWarkentin/LiederAnzeige/releases/download/"+root.tag_name+"/LiederAnzeige.Setup.msi";
             Directory.CreateDirectory(@".\updates");
-            string destinationPath = @".\updates\LiederAnzeige "+root.name +".zip";
+            string destinationPath = @".\updates\LiederAnzeige.Setup.msi";
 
             using (var client = new WebClient())
             {
                 client.Headers.Add("user-agent", "MyRSSReader/1.0");
                 client.DownloadFile(downloadLink, destinationPath);
-
-                ZipFile.ExtractToDirectory(destinationPath, @".\updates\LiederAnzeige "+root.name);
-                
+                pB_ichArbeite.Value = 99;
+                Process.Start(destinationPath);
+                Application.Exit();
 
             }
         }
