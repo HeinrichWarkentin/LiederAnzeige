@@ -16,13 +16,15 @@ namespace LiederAnzeige
         {
             InitializeComponent();
             scaliereFolien();
+            präsentation = new Präsentation();
         }
-
+        Präsentation präsentation;
 
         private void scaliereFolien()
         {
-            int p_auflösung_b = 1920;
-            int p_auflösung_h = 1080;
+            
+            int p_auflösung_b = Screen.AllScreens[1].Bounds.Width;
+            int p_auflösung_h = Screen.AllScreens[1].Bounds.Height;
 
 
             int breite = gB_Folien.Width;
@@ -73,9 +75,55 @@ namespace LiederAnzeige
                 if (i == 8)
                 {
                     this.gB_Folien.Height = 10 + abstand * 5 + btns_Folien[i].Height * 3 + 25;
+                    //this.gB_Folien.Width = 
                 }
             }
 
+            
+        }
+
+        //präsentation
+        private void präsentationStartenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length > 1)
+            {
+                präsentation.DesktopBounds = Screen.AllScreens[1].Bounds;
+                präsentation.TopMost = true;
+                präsentation.FormBorderStyle = FormBorderStyle.None;
+                präsentation.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                MessageBox.Show("Bitte verwenden sie einen zweiten Bildschirm");
+            }
+            präsentation.Show();
+        }
+
+        private void präsentationStoppenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            präsentation.Hide();
+        }
+
+        private void leerenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            präsentation.setText("");
+            präsentation.setTitel("");
+            präsentation.setBild(null);
+        }
+
+        private void nurBildLeerenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            präsentation.setBild(null);
+        }
+
+        private void nurTextLeerenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            präsentation.setText("");
+            präsentation.setTitel("");
+        }
+        //präsentation ende
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
             
         }
 

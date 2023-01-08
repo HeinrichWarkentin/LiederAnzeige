@@ -37,6 +37,8 @@ namespace LiederAnzeige
             this.präsentationStartenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.präsentationStoppenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nurBildLeerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nurTextLeerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ansichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +59,6 @@ namespace LiederAnzeige
             this.bt_naechsteFolie = new System.Windows.Forms.Button();
             this.lb_Folien = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.nurBildLeerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nurTextLeerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_Folienseite_zurück = new System.Windows.Forms.Button();
             this.bt_Folienseite_vor = new System.Windows.Forms.Button();
             this.bt_folie_1 = new System.Windows.Forms.Button();
@@ -122,20 +122,37 @@ namespace LiederAnzeige
             // präsentationStartenToolStripMenuItem
             // 
             this.präsentationStartenToolStripMenuItem.Name = "präsentationStartenToolStripMenuItem";
-            this.präsentationStartenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.präsentationStartenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.präsentationStartenToolStripMenuItem.Text = "Start";
+            this.präsentationStartenToolStripMenuItem.Click += new System.EventHandler(this.präsentationStartenToolStripMenuItem_Click);
             // 
             // präsentationStoppenToolStripMenuItem
             // 
             this.präsentationStoppenToolStripMenuItem.Name = "präsentationStoppenToolStripMenuItem";
-            this.präsentationStoppenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.präsentationStoppenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.präsentationStoppenToolStripMenuItem.Text = "Stop";
+            this.präsentationStoppenToolStripMenuItem.Click += new System.EventHandler(this.präsentationStoppenToolStripMenuItem_Click);
             // 
             // leerenToolStripMenuItem
             // 
             this.leerenToolStripMenuItem.Name = "leerenToolStripMenuItem";
-            this.leerenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.leerenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.leerenToolStripMenuItem.Text = "Alles Leeren";
+            this.leerenToolStripMenuItem.Click += new System.EventHandler(this.leerenToolStripMenuItem_Click);
+            // 
+            // nurBildLeerenToolStripMenuItem
+            // 
+            this.nurBildLeerenToolStripMenuItem.Name = "nurBildLeerenToolStripMenuItem";
+            this.nurBildLeerenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.nurBildLeerenToolStripMenuItem.Text = "Nur Bild Leeren";
+            this.nurBildLeerenToolStripMenuItem.Click += new System.EventHandler(this.nurBildLeerenToolStripMenuItem_Click);
+            // 
+            // nurTextLeerenToolStripMenuItem
+            // 
+            this.nurTextLeerenToolStripMenuItem.Name = "nurTextLeerenToolStripMenuItem";
+            this.nurTextLeerenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.nurTextLeerenToolStripMenuItem.Text = "Nur Text Leeren";
+            this.nurTextLeerenToolStripMenuItem.Click += new System.EventHandler(this.nurTextLeerenToolStripMenuItem_Click);
             // 
             // liveToolStripMenuItem
             // 
@@ -312,18 +329,6 @@ namespace LiederAnzeige
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // nurBildLeerenToolStripMenuItem
-            // 
-            this.nurBildLeerenToolStripMenuItem.Name = "nurBildLeerenToolStripMenuItem";
-            this.nurBildLeerenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nurBildLeerenToolStripMenuItem.Text = "Nur Bild Leeren";
-            // 
-            // nurTextLeerenToolStripMenuItem
-            // 
-            this.nurTextLeerenToolStripMenuItem.Name = "nurTextLeerenToolStripMenuItem";
-            this.nurTextLeerenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nurTextLeerenToolStripMenuItem.Text = "Nur Text Leeren";
-            // 
             // bt_Folienseite_zurück
             // 
             this.bt_Folienseite_zurück.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -348,7 +353,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_1.BackColor = System.Drawing.Color.Black;
             this.bt_folie_1.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_1.Location = new System.Drawing.Point(6, 19);
+            this.bt_folie_1.Location = new System.Drawing.Point(10, 19);
             this.bt_folie_1.Name = "bt_folie_1";
             this.bt_folie_1.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_1.TabIndex = 7;
@@ -359,7 +364,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_2.BackColor = System.Drawing.Color.Black;
             this.bt_folie_2.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_2.Location = new System.Drawing.Point(211, 19);
+            this.bt_folie_2.Location = new System.Drawing.Point(198, 19);
             this.bt_folie_2.Name = "bt_folie_2";
             this.bt_folie_2.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_2.TabIndex = 8;
@@ -370,7 +375,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_3.BackColor = System.Drawing.Color.Black;
             this.bt_folie_3.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_3.Location = new System.Drawing.Point(399, 30);
+            this.bt_folie_3.Location = new System.Drawing.Point(390, 19);
             this.bt_folie_3.Name = "bt_folie_3";
             this.bt_folie_3.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_3.TabIndex = 9;
@@ -381,7 +386,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_4.BackColor = System.Drawing.Color.Black;
             this.bt_folie_4.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_4.Location = new System.Drawing.Point(14, 146);
+            this.bt_folie_4.Location = new System.Drawing.Point(10, 125);
             this.bt_folie_4.Name = "bt_folie_4";
             this.bt_folie_4.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_4.TabIndex = 10;
@@ -392,7 +397,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_5.BackColor = System.Drawing.Color.Black;
             this.bt_folie_5.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_5.Location = new System.Drawing.Point(211, 155);
+            this.bt_folie_5.Location = new System.Drawing.Point(198, 125);
             this.bt_folie_5.Name = "bt_folie_5";
             this.bt_folie_5.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_5.TabIndex = 11;
@@ -403,7 +408,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_6.BackColor = System.Drawing.Color.Black;
             this.bt_folie_6.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_6.Location = new System.Drawing.Point(397, 155);
+            this.bt_folie_6.Location = new System.Drawing.Point(390, 125);
             this.bt_folie_6.Name = "bt_folie_6";
             this.bt_folie_6.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_6.TabIndex = 12;
@@ -414,7 +419,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_7.BackColor = System.Drawing.Color.Black;
             this.bt_folie_7.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_7.Location = new System.Drawing.Point(14, 280);
+            this.bt_folie_7.Location = new System.Drawing.Point(7, 231);
             this.bt_folie_7.Name = "bt_folie_7";
             this.bt_folie_7.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_7.TabIndex = 13;
@@ -425,7 +430,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_8.BackColor = System.Drawing.Color.Black;
             this.bt_folie_8.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_8.Location = new System.Drawing.Point(211, 271);
+            this.bt_folie_8.Location = new System.Drawing.Point(198, 231);
             this.bt_folie_8.Name = "bt_folie_8";
             this.bt_folie_8.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_8.TabIndex = 14;
@@ -436,7 +441,7 @@ namespace LiederAnzeige
             // 
             this.bt_folie_9.BackColor = System.Drawing.Color.Black;
             this.bt_folie_9.ForeColor = System.Drawing.Color.White;
-            this.bt_folie_9.Location = new System.Drawing.Point(397, 271);
+            this.bt_folie_9.Location = new System.Drawing.Point(390, 231);
             this.bt_folie_9.Name = "bt_folie_9";
             this.bt_folie_9.Size = new System.Drawing.Size(180, 100);
             this.bt_folie_9.TabIndex = 15;
@@ -488,6 +493,7 @@ namespace LiederAnzeige
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "LiederAnzeige";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
