@@ -72,6 +72,9 @@ namespace LiederAnzeige
             this.bt_folie_9 = new System.Windows.Forms.Button();
             this.la_folienseiten = new System.Windows.Forms.Label();
             this.gB_Folien = new System.Windows.Forms.GroupBox();
+            this.manuellerTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bilderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,40 +125,44 @@ namespace LiederAnzeige
             // präsentationStartenToolStripMenuItem
             // 
             this.präsentationStartenToolStripMenuItem.Name = "präsentationStartenToolStripMenuItem";
-            this.präsentationStartenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.präsentationStartenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.präsentationStartenToolStripMenuItem.Text = "Start";
             this.präsentationStartenToolStripMenuItem.Click += new System.EventHandler(this.präsentationStartenToolStripMenuItem_Click);
             // 
             // präsentationStoppenToolStripMenuItem
             // 
             this.präsentationStoppenToolStripMenuItem.Name = "präsentationStoppenToolStripMenuItem";
-            this.präsentationStoppenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.präsentationStoppenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.präsentationStoppenToolStripMenuItem.Text = "Stop";
             this.präsentationStoppenToolStripMenuItem.Click += new System.EventHandler(this.präsentationStoppenToolStripMenuItem_Click);
             // 
             // leerenToolStripMenuItem
             // 
             this.leerenToolStripMenuItem.Name = "leerenToolStripMenuItem";
-            this.leerenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.leerenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.leerenToolStripMenuItem.Text = "Alles Leeren";
             this.leerenToolStripMenuItem.Click += new System.EventHandler(this.leerenToolStripMenuItem_Click);
             // 
             // nurBildLeerenToolStripMenuItem
             // 
             this.nurBildLeerenToolStripMenuItem.Name = "nurBildLeerenToolStripMenuItem";
-            this.nurBildLeerenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.nurBildLeerenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nurBildLeerenToolStripMenuItem.Text = "Nur Bild Leeren";
             this.nurBildLeerenToolStripMenuItem.Click += new System.EventHandler(this.nurBildLeerenToolStripMenuItem_Click);
             // 
             // nurTextLeerenToolStripMenuItem
             // 
             this.nurTextLeerenToolStripMenuItem.Name = "nurTextLeerenToolStripMenuItem";
-            this.nurTextLeerenToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.nurTextLeerenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nurTextLeerenToolStripMenuItem.Text = "Nur Text Leeren";
             this.nurTextLeerenToolStripMenuItem.Click += new System.EventHandler(this.nurTextLeerenToolStripMenuItem_Click);
             // 
             // liveToolStripMenuItem
             // 
+            this.liveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manuellerTextToolStripMenuItem,
+            this.bilderToolStripMenuItem,
+            this.videoToolStripMenuItem});
             this.liveToolStripMenuItem.Name = "liveToolStripMenuItem";
             this.liveToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.liveToolStripMenuItem.Text = "Live";
@@ -479,11 +486,31 @@ namespace LiederAnzeige
             this.gB_Folien.TabStop = false;
             this.gB_Folien.Text = "Folien";
             // 
+            // manuellerTextToolStripMenuItem
+            // 
+            this.manuellerTextToolStripMenuItem.Name = "manuellerTextToolStripMenuItem";
+            this.manuellerTextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manuellerTextToolStripMenuItem.Text = "Manueller Text";
+            this.manuellerTextToolStripMenuItem.Click += new System.EventHandler(this.manuellerTextToolStripMenuItem_Click);
+            // 
+            // bilderToolStripMenuItem
+            // 
+            this.bilderToolStripMenuItem.Name = "bilderToolStripMenuItem";
+            this.bilderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bilderToolStripMenuItem.Text = "Bilder";
+            this.bilderToolStripMenuItem.Click += new System.EventHandler(this.bilderToolStripMenuItem_Click);
+            // 
+            // videoToolStripMenuItem
+            // 
+            this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
+            this.videoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.videoToolStripMenuItem.Text = "Video";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 771);
+            this.ClientSize = new System.Drawing.Size(608, 722);
             this.Controls.Add(this.gB_Folien);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -553,6 +580,9 @@ namespace LiederAnzeige
         private System.Windows.Forms.Button bt_folie_9;
         private System.Windows.Forms.Label la_folienseiten;
         private System.Windows.Forms.GroupBox gB_Folien;
+        private System.Windows.Forms.ToolStripMenuItem manuellerTextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bilderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
     }
 }
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,6 +49,25 @@ namespace LiederAnzeige
 
             this.Hide();
             e.Cancel = true;
+        }
+
+        private void Präsentation_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F11)
+            {
+                if (this.FormBorderStyle == FormBorderStyle.None)
+                {
+                    this.FormBorderStyle = FormBorderStyle.FixedSingle;
+                    this.WindowState = FormWindowState.Normal;
+                }
+                else
+                {
+                    this.FormBorderStyle = FormBorderStyle.None;
+                    this.TopMost = true;
+                    this.WindowState = FormWindowState.Maximized;
+                }
+                
+            }
         }
     }
 }

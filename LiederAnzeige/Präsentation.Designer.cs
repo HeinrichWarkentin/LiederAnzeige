@@ -82,6 +82,7 @@
             this.Name = "Präsentation";
             this.Text = "Präsentation";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Präsentation_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Präsentation_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

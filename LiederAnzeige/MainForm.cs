@@ -12,13 +12,19 @@ namespace LiederAnzeige
 {
     public partial class MainForm : Form
     {
+        Präsentation präsentation;
+        manuellerText manuelleTexteingabe;
+        bilderForm bilderAnzeige;
+
         public MainForm()
         {
             InitializeComponent();
             scaliereFolien();
             präsentation = new Präsentation();
+            manuelleTexteingabe = new manuellerText(präsentation);
+            bilderAnzeige = new bilderForm(präsentation);
         }
-        Präsentation präsentation;
+        
 
         private void scaliereFolien()
         {
@@ -108,6 +114,7 @@ namespace LiederAnzeige
         {
             präsentation.setText("");
             präsentation.setTitel("");
+            präsentation.setakVers("");
             präsentation.setBild(null);
         }
 
@@ -120,6 +127,7 @@ namespace LiederAnzeige
         {
             präsentation.setText("");
             präsentation.setTitel("");
+            präsentation.setakVers("");
         }
         //präsentation ende
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -127,5 +135,14 @@ namespace LiederAnzeige
             
         }
 
+        private void manuellerTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manuelleTexteingabe.Show();
+        }
+
+        private void bilderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bilderAnzeige.Show();
+        }
     }
 }
