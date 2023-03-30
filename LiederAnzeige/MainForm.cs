@@ -134,10 +134,7 @@ namespace LiederAnzeige
             präsentation.setakVers("");
         }
         //präsentation ende
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
+        
 
         private void manuellerTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -147,6 +144,52 @@ namespace LiederAnzeige
         private void bilderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bilderAnzeige.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.MainFormMaximised)
+            {
+                Location = Properties.Settings.Default.MainFormLocation;
+                WindowState = FormWindowState.Maximized;
+                Size = Properties.Settings.Default.MainFormSize;
+            }
+            else if (Properties.Settings.Default.MainFormMinimised)
+            {
+                Location = Properties.Settings.Default.MainFormLocation;
+                WindowState = FormWindowState.Minimized;
+                Size = Properties.Settings.Default.MainFormSize;
+            }
+            else
+            {
+                Location = Properties.Settings.Default.MainFormLocation;
+                Size = Properties.Settings.Default.MainFormSize;
+            }
+        }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                Properties.Settings.Default.MainFormLocation = RestoreBounds.Location;
+                Properties.Settings.Default.MainFormSize = RestoreBounds.Size;
+                Properties.Settings.Default.MainFormMaximised = true;
+                Properties.Settings.Default.MainFormMinimised = false;
+            }
+            else if (WindowState == FormWindowState.Normal)
+            {
+                Properties.Settings.Default.MainFormLocation = Location;
+                Properties.Settings.Default.MainFormSize = Size;
+                Properties.Settings.Default.MainFormMaximised = false;
+                Properties.Settings.Default.MainFormMinimised = false;
+            }
+            else
+            {
+                Properties.Settings.Default.MainFormLocation = RestoreBounds.Location;
+                Properties.Settings.Default.MainFormSize = RestoreBounds.Size;
+                Properties.Settings.Default.MainFormMaximised = false;
+                Properties.Settings.Default.MainFormMinimised = true;
+            }
+            Properties.Settings.Default.Save();
         }
     }
 }

@@ -97,6 +97,7 @@
             this.Name = "manuellerText";
             this.Text = "Manuelle Texteingabe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.manuellerText_FormClosing);
+            this.Load += new System.EventHandler(this.manuellerText_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

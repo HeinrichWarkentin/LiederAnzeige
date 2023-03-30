@@ -21,6 +21,29 @@ namespace LiederAnzeige
 
         private void manuellerText_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                Properties.Settings.Default.manuellerTextLocation = RestoreBounds.Location;
+                Properties.Settings.Default.manuellerTextSize = RestoreBounds.Size;
+                Properties.Settings.Default.manuellerTextMaximised = true;
+                Properties.Settings.Default.manuellerTextMinimised = false;
+            }
+            else if (WindowState == FormWindowState.Normal)
+            {
+                Properties.Settings.Default.manuellerTextLocation = Location;
+                Properties.Settings.Default.manuellerTextSize = Size;
+                Properties.Settings.Default.manuellerTextMaximised = false;
+                Properties.Settings.Default.manuellerTextMinimised = false;
+            }
+            else
+            {
+                Properties.Settings.Default.manuellerTextLocation = RestoreBounds.Location;
+                Properties.Settings.Default.manuellerTextSize = RestoreBounds.Size;
+                Properties.Settings.Default.manuellerTextMaximised = false;
+                Properties.Settings.Default.manuellerTextMinimised = true;
+            }
+            Properties.Settings.Default.Save();
+
             this.Hide();
             e.Cancel = true;
         }
@@ -37,6 +60,27 @@ namespace LiederAnzeige
             }
             präsentation.setText(rtb_text.Text);
             präsentation.setakVers("");
+        }
+
+        private void manuellerText_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.bilderFormMaximised)
+            {
+                Location = Properties.Settings.Default.manuellerTextLocation;
+                WindowState = FormWindowState.Maximized;
+                Size = Properties.Settings.Default.manuellerTextSize;
+            }
+            else if (Properties.Settings.Default.manuellerTextMinimised)
+            {
+                Location = Properties.Settings.Default.manuellerTextLocation;
+                WindowState = FormWindowState.Minimized;
+                Size = Properties.Settings.Default.manuellerTextSize;
+            }
+            else
+            {
+                Location = Properties.Settings.Default.manuellerTextLocation;
+                Size = Properties.Settings.Default.manuellerTextSize;
+            }
         }
     }
 }

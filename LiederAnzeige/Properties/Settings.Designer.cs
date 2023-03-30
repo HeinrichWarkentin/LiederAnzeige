@@ -73,13 +73,109 @@ namespace LiederAnzeige.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
         public int bilderFormcb_anzeigeArtSelectedIndex {
             get {
                 return ((int)(this["bilderFormcb_anzeigeArtSelectedIndex"]));
             }
             set {
                 this["bilderFormcb_anzeigeArtSelectedIndex"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point manuellerTextLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["manuellerTextLocation"]));
+            }
+            set {
+                this["manuellerTextLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000, 600")]
+        public global::System.Drawing.Size manuellerTextSize {
+            get {
+                return ((global::System.Drawing.Size)(this["manuellerTextSize"]));
+            }
+            set {
+                this["manuellerTextSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool manuellerTextMaximised {
+            get {
+                return ((bool)(this["manuellerTextMaximised"]));
+            }
+            set {
+                this["manuellerTextMaximised"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool manuellerTextMinimised {
+            get {
+                return ((bool)(this["manuellerTextMinimised"]));
+            }
+            set {
+                this["manuellerTextMinimised"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point MainFormLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["MainFormLocation"]));
+            }
+            set {
+                this["MainFormLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("624, 761")]
+        public global::System.Drawing.Size MainFormSize {
+            get {
+                return ((global::System.Drawing.Size)(this["MainFormSize"]));
+            }
+            set {
+                this["MainFormSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MainFormMaximised {
+            get {
+                return ((bool)(this["MainFormMaximised"]));
+            }
+            set {
+                this["MainFormMaximised"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MainFormMinimised {
+            get {
+                return ((bool)(this["MainFormMinimised"]));
+            }
+            set {
+                this["MainFormMinimised"] = value;
             }
         }
     }
