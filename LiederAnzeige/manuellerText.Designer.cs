@@ -46,6 +46,9 @@
             // 
             // rtb_text
             // 
+            this.rtb_text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtb_text.Location = new System.Drawing.Point(13, 51);
             this.rtb_text.Name = "rtb_text";
             this.rtb_text.Size = new System.Drawing.Size(775, 387);
@@ -72,6 +75,7 @@
             // 
             // bt_anzeigen
             // 
+            this.bt_anzeigen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_anzeigen.Location = new System.Drawing.Point(713, 7);
             this.bt_anzeigen.Name = "bt_anzeigen";
             this.bt_anzeigen.Size = new System.Drawing.Size(75, 23);

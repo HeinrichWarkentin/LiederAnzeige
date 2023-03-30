@@ -39,9 +39,10 @@ namespace LiederAnzeige
             la_akVers.Text = pVersInfo;
         }
 
-        public void setBild(Image pImage)
+        public void setBild(Image pImage, PictureBoxSizeMode pMode)
         {
-            this.BackgroundImage = pImage;
+            this.pbHintergrund.Image = pImage;
+            this.pbHintergrund.SizeMode= pMode;
         }
 
         private void Präsentation_FormClosing(object sender, FormClosingEventArgs e)
@@ -69,5 +70,6 @@ namespace LiederAnzeige
                 
             }
         }
+
     }
 }

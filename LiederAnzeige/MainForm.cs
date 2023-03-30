@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +20,13 @@ namespace LiederAnzeige
         public MainForm()
         {
             InitializeComponent();
+           
             scaliereFolien();
             präsentation = new Präsentation();
             manuelleTexteingabe = new manuellerText(präsentation);
             bilderAnzeige = new bilderForm(präsentation);
+
+            
         }
         
 
@@ -115,12 +119,12 @@ namespace LiederAnzeige
             präsentation.setText("");
             präsentation.setTitel("");
             präsentation.setakVers("");
-            präsentation.setBild(null);
+            präsentation.setBild(null, PictureBoxSizeMode.Zoom);
         }
 
         private void nurBildLeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            präsentation.setBild(null);
+            präsentation.setBild(null, PictureBoxSizeMode.Zoom);
         }
 
         private void nurTextLeerenToolStripMenuItem_Click(object sender, EventArgs e)

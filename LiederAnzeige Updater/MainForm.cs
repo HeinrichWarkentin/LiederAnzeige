@@ -30,6 +30,8 @@ namespace LiederAnzeige_Updater
             logInfo = new LogToFile(3, "Debug");
 
             suche_nach_Updates();
+
+
         }
         LogToFile logError;
         LogToFile logWarning;
