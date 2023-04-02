@@ -16,6 +16,7 @@ namespace LiederAnzeige
         Präsentation präsentation;
         manuellerText manuelleTexteingabe;
         bilderForm bilderAnzeige;
+        neuesLiedForm neuesLiederstellen;
 
         public MainForm()
         {
@@ -25,8 +26,9 @@ namespace LiederAnzeige
             präsentation = new Präsentation();
             manuelleTexteingabe = new manuellerText(präsentation);
             bilderAnzeige = new bilderForm(präsentation);
+            neuesLiederstellen = new neuesLiedForm();
 
-            
+
         }
         
 
@@ -139,11 +141,14 @@ namespace LiederAnzeige
         private void manuellerTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             manuelleTexteingabe.Show();
+            manuelleTexteingabe.Select();
+
         }
 
         private void bilderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bilderAnzeige.Show();
+            bilderAnzeige.Select();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -190,6 +195,12 @@ namespace LiederAnzeige
                 Properties.Settings.Default.MainFormMinimised = true;
             }
             Properties.Settings.Default.Save();
+        }
+
+        private void neuesLiedErstellenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            neuesLiederstellen.Show();
+            neuesLiederstellen.Select();
         }
     }
 }

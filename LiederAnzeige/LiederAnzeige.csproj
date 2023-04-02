@@ -105,6 +105,7 @@
     <Compile Include="bilderForm.Designer.cs">
       <DependentUpon>bilderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="lied.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,12 @@
     </Compile>
     <Compile Include="manuellerText.Designer.cs">
       <DependentUpon>manuellerText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="neuesLiedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="neuesLiedForm.Designer.cs">
+      <DependentUpon>neuesLiedForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manuellerText.resx">
       <DependentUpon>manuellerText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="neuesLiedForm.resx">
+      <DependentUpon>neuesLiedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

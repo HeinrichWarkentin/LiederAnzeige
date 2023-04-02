@@ -156,7 +156,15 @@ namespace LiederAnzeige
 
         private void bilderForm_Load(object sender, EventArgs e)
         {
-            cb_anzeigeArt.SelectedIndex = Properties.Settings.Default.bilderFormcb_anzeigeArtSelectedIndex;
+            if (cb_anzeigeArt.Items.Count - 1 < Properties.Settings.Default.bilderFormcb_anzeigeArtSelectedIndex)
+            {
+                cb_anzeigeArt.SelectedIndex = 0;
+            }
+            else
+            {
+                cb_anzeigeArt.SelectedIndex = Properties.Settings.Default.bilderFormcb_anzeigeArtSelectedIndex;
+            }
+            
 
 
             if (Properties.Settings.Default.bilderFormMaximised)

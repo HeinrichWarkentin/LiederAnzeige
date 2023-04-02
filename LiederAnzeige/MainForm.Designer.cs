@@ -75,6 +75,7 @@ namespace LiederAnzeige
             this.bt_folie_9 = new System.Windows.Forms.Button();
             this.la_folienseiten = new System.Windows.Forms.Label();
             this.gB_Folien = new System.Windows.Forms.GroupBox();
+            this.neuesLiedErstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,6 +101,8 @@ namespace LiederAnzeige
             // 
             // dateiToolStripMenuItem
             // 
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neuesLiedErstellenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
@@ -170,21 +173,21 @@ namespace LiederAnzeige
             // manuellerTextToolStripMenuItem
             // 
             this.manuellerTextToolStripMenuItem.Name = "manuellerTextToolStripMenuItem";
-            this.manuellerTextToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.manuellerTextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manuellerTextToolStripMenuItem.Text = "Manueller Text";
             this.manuellerTextToolStripMenuItem.Click += new System.EventHandler(this.manuellerTextToolStripMenuItem_Click);
             // 
             // bilderToolStripMenuItem
             // 
             this.bilderToolStripMenuItem.Name = "bilderToolStripMenuItem";
-            this.bilderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.bilderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bilderToolStripMenuItem.Text = "Bilder";
             this.bilderToolStripMenuItem.Click += new System.EventHandler(this.bilderToolStripMenuItem_Click);
             // 
             // videoToolStripMenuItem
             // 
             this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
-            this.videoToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.videoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.videoToolStripMenuItem.Text = "Video";
             // 
             // ansichtToolStripMenuItem
@@ -506,6 +509,13 @@ namespace LiederAnzeige
             this.gB_Folien.TabStop = false;
             this.gB_Folien.Text = "Folien";
             // 
+            // neuesLiedErstellenToolStripMenuItem
+            // 
+            this.neuesLiedErstellenToolStripMenuItem.Name = "neuesLiedErstellenToolStripMenuItem";
+            this.neuesLiedErstellenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuesLiedErstellenToolStripMenuItem.Text = "Neues Lied erstellen";
+            this.neuesLiedErstellenToolStripMenuItem.Click += new System.EventHandler(this.neuesLiedErstellenToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +594,7 @@ namespace LiederAnzeige
         private System.Windows.Forms.ToolStripMenuItem manuellerTextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bilderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem neuesLiedErstellenToolStripMenuItem;
     }
 }
 
