@@ -99,6 +99,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="akScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="akScreenForm.Designer.cs">
+      <DependentUpon>akScreenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="bilderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,15 @@
     <Compile Include="Präsentation.Designer.cs">
       <DependentUpon>Präsentation.cs</DependentUpon>
     </Compile>
+    <Compile Include="settingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settingsForm.Designer.cs">
+      <DependentUpon>settingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="akScreenForm.resx">
+      <DependentUpon>akScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bilderForm.resx">
       <DependentUpon>bilderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +171,9 @@
     </Compile>
     <EmbeddedResource Include="Präsentation.resx">
       <DependentUpon>Präsentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settingsForm.resx">
+      <DependentUpon>settingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />

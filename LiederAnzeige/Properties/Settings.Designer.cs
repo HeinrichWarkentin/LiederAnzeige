@@ -178,5 +178,113 @@ namespace LiederAnzeige.Properties {
                 this["MainFormMinimised"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point settingsFormLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["settingsFormLocation"]));
+            }
+            set {
+                this["settingsFormLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size settingsFormSize {
+            get {
+                return ((global::System.Drawing.Size)(this["settingsFormSize"]));
+            }
+            set {
+                this["settingsFormSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool settingsFormMaximised {
+            get {
+                return ((bool)(this["settingsFormMaximised"]));
+            }
+            set {
+                this["settingsFormMaximised"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool settingsFormMinimised {
+            get {
+                return ((bool)(this["settingsFormMinimised"]));
+            }
+            set {
+                this["settingsFormMinimised"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int anzeigeMonitor {
+            get {
+                return ((int)(this["anzeigeMonitor"]));
+            }
+            set {
+                this["anzeigeMonitor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Lobet den HERRN")]
+        public string initalText {
+            get {
+                return ((string)(this["initalText"]));
+            }
+            set {
+                this["initalText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 48pt")]
+        public global::System.Drawing.Font TextFont {
+            get {
+                return ((global::System.Drawing.Font)(this["TextFont"]));
+            }
+            set {
+                this["TextFont"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color TextSchriftFarbe {
+            get {
+                return ((global::System.Drawing.Color)(this["TextSchriftFarbe"]));
+            }
+            set {
+                this["TextSchriftFarbe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color TextHintergrundFarbe {
+            get {
+                return ((global::System.Drawing.Color)(this["TextHintergrundFarbe"]));
+            }
+            set {
+                this["TextHintergrundFarbe"] = value;
+            }
+        }
     }
 }

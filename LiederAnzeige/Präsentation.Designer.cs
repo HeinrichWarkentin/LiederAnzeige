@@ -47,7 +47,7 @@
             this.la_titel.Size = new System.Drawing.Size(1000, 100);
             this.la_titel.TabIndex = 0;
             this.la_titel.Text = "Titel";
-            this.la_titel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.la_titel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // la_text
             // 

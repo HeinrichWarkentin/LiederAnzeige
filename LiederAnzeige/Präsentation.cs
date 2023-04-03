@@ -52,6 +52,26 @@ namespace LiederAnzeige
             e.Cancel = true;
         }
 
+        public void setFont(Font pFont)
+        {
+            la_text.Font = pFont;
+            la_titel.Font = pFont;
+        }
+        public void setBackgroundColor(Color pColor)
+        {
+            la_titel.BackColor = Color.Transparent;
+            la_text.BackColor = Color.Transparent;
+            la_akVers.BackColor = Color.Transparent;
+            this.BackColor = pColor;
+        }
+        public void setFontColor(Color pColor)
+        {
+            la_akVers.ForeColor = pColor;
+            la_text.ForeColor = pColor;
+            la_titel.ForeColor = pColor;
+
+        }
+
         private void Präsentation_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F11)

@@ -17,6 +17,7 @@ namespace LiederAnzeige
         manuellerText manuelleTexteingabe;
         bilderForm bilderAnzeige;
         neuesLiedForm neuesLiederstellen;
+        settingsForm einstellungen;
 
         public MainForm()
         {
@@ -26,7 +27,12 @@ namespace LiederAnzeige
             präsentation = new Präsentation();
             manuelleTexteingabe = new manuellerText(präsentation);
             bilderAnzeige = new bilderForm(präsentation);
+            einstellungen = new settingsForm();
+
+
+
             neuesLiederstellen = new neuesLiedForm();
+
 
 
         }
@@ -99,7 +105,7 @@ namespace LiederAnzeige
         {
             if (Screen.AllScreens.Length > 1)
             {
-                präsentation.DesktopBounds = Screen.AllScreens[1].Bounds;
+                präsentation.DesktopBounds = Screen.AllScreens[Properties.Settings.Default.anzeigeMonitor].Bounds;
                 präsentation.TopMost = true;
                 präsentation.FormBorderStyle = FormBorderStyle.None;
                 präsentation.WindowState = FormWindowState.Maximized;
@@ -108,6 +114,7 @@ namespace LiederAnzeige
             {
                 MessageBox.Show("Bitte verwenden sie einen zweiten Bildschirm");
             }
+            präsentation.Select();
             präsentation.Show();
         }
 
@@ -201,6 +208,12 @@ namespace LiederAnzeige
         {
             neuesLiederstellen.Show();
             neuesLiederstellen.Select();
+        }
+
+        private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            einstellungen.Show();
+            einstellungen.Select();
         }
     }
 }

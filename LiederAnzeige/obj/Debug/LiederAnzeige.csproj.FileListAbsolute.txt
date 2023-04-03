@@ -41,3 +41,5 @@ C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\System.
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\System.ValueTuple.xml
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.csproj.CopyComplete
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.neuesLiedForm.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.settingsForm.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.akScreenForm.resources
