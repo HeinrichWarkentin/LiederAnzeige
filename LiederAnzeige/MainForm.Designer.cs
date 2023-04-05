@@ -33,6 +33,7 @@ namespace LiederAnzeige
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neuesLiedErstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.präsentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.präsentationStartenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +77,7 @@ namespace LiederAnzeige
             this.bt_folie_9 = new System.Windows.Forms.Button();
             this.la_folienseiten = new System.Windows.Forms.Label();
             this.gB_Folien = new System.Windows.Forms.GroupBox();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nachUpdatesSuchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -112,9 +113,16 @@ namespace LiederAnzeige
             // neuesLiedErstellenToolStripMenuItem
             // 
             this.neuesLiedErstellenToolStripMenuItem.Name = "neuesLiedErstellenToolStripMenuItem";
-            this.neuesLiedErstellenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuesLiedErstellenToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.neuesLiedErstellenToolStripMenuItem.Text = "Neues Lied erstellen";
             this.neuesLiedErstellenToolStripMenuItem.Click += new System.EventHandler(this.neuesLiedErstellenToolStripMenuItem_Click);
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
+            this.einstellungenToolStripMenuItem.Click += new System.EventHandler(this.einstellungenToolStripMenuItem_Click);
             // 
             // bearbeitenToolStripMenuItem
             // 
@@ -207,6 +215,8 @@ namespace LiederAnzeige
             // 
             // hilfeToolStripMenuItem
             // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nachUpdatesSuchenToolStripMenuItem});
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.hilfeToolStripMenuItem.Text = "Hilfe";
@@ -518,12 +528,12 @@ namespace LiederAnzeige
             this.gB_Folien.TabStop = false;
             this.gB_Folien.Text = "Folien";
             // 
-            // einstellungenToolStripMenuItem
+            // nachUpdatesSuchenToolStripMenuItem
             // 
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
-            this.einstellungenToolStripMenuItem.Click += new System.EventHandler(this.einstellungenToolStripMenuItem_Click);
+            this.nachUpdatesSuchenToolStripMenuItem.Name = "nachUpdatesSuchenToolStripMenuItem";
+            this.nachUpdatesSuchenToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.nachUpdatesSuchenToolStripMenuItem.Text = "Nach Updates suchen";
+            this.nachUpdatesSuchenToolStripMenuItem.Click += new System.EventHandler(this.nachUpdatesSuchenToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -605,6 +615,7 @@ namespace LiederAnzeige
         private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem neuesLiedErstellenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nachUpdatesSuchenToolStripMenuItem;
     }
 }
 

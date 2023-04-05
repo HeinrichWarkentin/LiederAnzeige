@@ -111,6 +111,7 @@
     <Compile Include="bilderForm.Designer.cs">
       <DependentUpon>bilderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseSQL.cs" />
     <Compile Include="lied.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -204,9 +205,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Bilder\" />
+    <Folder Include="Liederbuecher\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\4.jpg" />
+    <Content Include="Datenbank\SQL_Datenbank.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datenbank\SQL_Datenbank_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SQL_Datenbank.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

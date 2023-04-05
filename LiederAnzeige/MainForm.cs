@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -211,6 +212,11 @@ namespace LiederAnzeige
         {
             einstellungen.Show();
             einstellungen.Select();
+        }
+
+        private void nachUpdatesSuchenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(".\\LiederAnzeige Updater.exe");
         }
     }
 }
