@@ -32,9 +32,6 @@ namespace LiederAnzeige
 
 
             neuesLiederstellen = new neuesLiedForm();
-
-
-
         }
         
 

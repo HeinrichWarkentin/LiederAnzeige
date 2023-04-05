@@ -14,9 +14,11 @@ namespace LiederAnzeige
 {
     public partial class settingsForm : Form
     {
+        Präsentation testpräsi;
         public settingsForm()
         {
             InitializeComponent();
+            testpräsi = new Präsentation();
         }
 
         private void cb_Bildschirme_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +123,7 @@ namespace LiederAnzeige
         private void rtb_initialText_TextChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.initalText = rtb_initialText.Text;
+            vorschauAktualliesieren();
         }
 
         private void bt_Fontändern_Click(object sender, EventArgs e)
@@ -129,6 +132,7 @@ namespace LiederAnzeige
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextFont = fd.Font;
+                vorschauAktualliesieren();
             }
             la_font.Text = "Font: " + Properties.Settings.Default.TextFont.Name + "; " + Properties.Settings.Default.TextFont.Size + "pt";
         }
@@ -139,6 +143,7 @@ namespace LiederAnzeige
             if (cd.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextHintergrundFarbe = cd.Color;
+                vorschauAktualliesieren();
             }
             la_hintergrundfarbe.Text = "Hintergrundfarbe: " + Properties.Settings.Default.TextHintergrundFarbe.ToString();
         }
@@ -149,14 +154,16 @@ namespace LiederAnzeige
             if (cd.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextSchriftFarbe = cd.Color;
+                vorschauAktualliesieren();
             }
             la_schriftfarbe.Text = "Schriftfarbe: " + Properties.Settings.Default.TextSchriftFarbe.ToString();
         }
 
-        private void bt_vorschau_Click(object sender, EventArgs e)
-        {
 
-            Präsentation testpräsi = new Präsentation();
+        
+
+        private void vorschauAktualliesieren()
+        {
             testpräsi.setText(Properties.Settings.Default.initalText);
 
             testpräsi.setTitel("Beispiel Titel");
@@ -165,8 +172,35 @@ namespace LiederAnzeige
 
             testpräsi.setFontColor(Properties.Settings.Default.TextSchriftFarbe);
             testpräsi.setBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
+        }
+        private void bt_vorschau_Click(object sender, EventArgs e)
+        {
+            if (bt_vorschau.Text == "Vorschau")
+            {
+                bt_vorschau.Text = "Vorschau beenden";
+                testpräsi.setText(Properties.Settings.Default.initalText);
 
-            testpräsi.Show();
+                testpräsi.setTitel("Beispiel Titel");
+                testpräsi.setFont(Properties.Settings.Default.TextFont);
+
+
+                testpräsi.setFontColor(Properties.Settings.Default.TextSchriftFarbe);
+                testpräsi.setBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
+                testpräsi.Show();
+                
+            }
+            else if (bt_vorschau.Text == "Vorschau beenden")
+            {
+                bt_vorschau.Text = "Vorschau";
+                testpräsi.Hide();
+            }
+            else
+            {
+                bt_vorschau.Text = "Vorschau";
+            }
+            
+
+            
         }
     }
 }

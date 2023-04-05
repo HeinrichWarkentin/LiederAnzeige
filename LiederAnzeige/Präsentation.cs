@@ -47,7 +47,6 @@ namespace LiederAnzeige
 
         private void Präsentation_FormClosing(object sender, FormClosingEventArgs e)
         {
-
             this.Hide();
             e.Cancel = true;
         }
