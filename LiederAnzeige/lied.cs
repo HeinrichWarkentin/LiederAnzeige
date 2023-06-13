@@ -162,5 +162,10 @@ namespace LiederAnzeige
         {
             return passtAlles;
         }
+
+        public string GetPfad()
+        {
+            return Pfad;
+        }
     }
 }
