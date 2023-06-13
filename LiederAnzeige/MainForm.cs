@@ -223,7 +223,15 @@ namespace LiederAnzeige
 
         private void nachUpdatesSuchenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(".\\LiederAnzeige Updater.exe");
+            try
+            {
+                Process.Start(".\\LiederAnzeige Updater.exe");
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
