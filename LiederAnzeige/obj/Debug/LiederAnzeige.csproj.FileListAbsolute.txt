@@ -43,3 +43,5 @@ C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederA
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.neuesLiedForm.resources
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.settingsForm.resources
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.akScreenForm.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Datenbank\SQL_Datenbank.mdf
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Datenbank\SQL_Datenbank_log.ldf

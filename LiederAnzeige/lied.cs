@@ -14,6 +14,13 @@ namespace LiederAnzeige
         private string Texter = "";
         private string Übersetzer = "";
         private bool passtAlles = true;
+
+        private string CopyRight = "";
+        List <string> Kategorien = new List<string>();
+        private string OriginalTitle = "";
+        private int Titelnummer = 0;
+
+
         
         private List<string[]> l_MetaDaten = new List<string[]>();
 
@@ -37,8 +44,13 @@ namespace LiederAnzeige
                             break;
                         case "#Author": Komponist= TMP_MdataWert;
                             break;
-
                         case "#VerseOrder": vers_refrain_reihenfolge = TMP_MdataWert.Split(',');
+                            break;
+                        case "#(c)": CopyRight = TMP_MdataWert;
+                            break;
+                        case "#OTitle": OriginalTitle = TMP_MdataWert;
+                            break;
+                        case "#Categories": String_To_List_Kategorien_Split_By_Komma_Space(TMP_MdataWert);
                             break;
                     }
                     l_MetaDaten.Add(new string[] { TMP_MdataName, TMP_MdataWert });
@@ -71,6 +83,14 @@ namespace LiederAnzeige
             }
         }
 
+        private void String_To_List_Kategorien_Split_By_Komma_Space(string pString)
+        {
+            string[] TMP_array = pString.Split(',');
+            for (int i = 0; i < TMP_array.Length; i++)
+            {
+                Kategorien.Add(TMP_array[i].Trim());
+            }
+        }
         public string GetStrophe(string pText)
         {
             string tmpreturn = "ERROR: Strophe "+ pText + " exestiert nicht";
@@ -118,6 +138,29 @@ namespace LiederAnzeige
         public string GetÜbersetzer()
         {
             return Übersetzer;
+        }
+        public string GetCopyRight()
+        {
+            return CopyRight;
+        }
+        public string GetOriginalTitle()
+        {
+            return OriginalTitle;
+        }
+
+        public int GetTitelnummer()
+        {
+            return Titelnummer;
+        }
+
+        public List<string> GetKategorien()
+        {
+            return Kategorien;
+        }
+
+        public bool GetpasstAlles()
+        {
+            return passtAlles;
         }
     }
 }

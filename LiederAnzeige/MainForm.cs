@@ -103,7 +103,14 @@ namespace LiederAnzeige
         {
             if (Screen.AllScreens.Length > 1)
             {
-                präsentation.DesktopBounds = Screen.AllScreens[Properties.Settings.Default.anzeigeMonitor].Bounds;
+                if (Properties.Settings.Default.anzeigeMonitor >= Screen.AllScreens.Length || Properties.Settings.Default.anzeigeMonitor < 1)
+                {
+                    präsentation.DesktopBounds = Screen.AllScreens[1].Bounds;
+                }
+                else
+                {
+                    präsentation.DesktopBounds = Screen.AllScreens[Properties.Settings.Default.anzeigeMonitor].Bounds;
+                }
                 präsentation.TopMost = true;
                 präsentation.FormBorderStyle = FormBorderStyle.None;
                 präsentation.WindowState = FormWindowState.Maximized;
