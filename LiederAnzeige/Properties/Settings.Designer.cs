@@ -286,5 +286,16 @@ namespace LiederAnzeige.Properties {
                 this["TextHintergrundFarbe"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Datenbank\\DB_" +
+            "LiederAnzeige.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string DB_LiederAnzeigeConnectionString {
+            get {
+                return ((string)(this["DB_LiederAnzeigeConnectionString"]));
+            }
+        }
     }
 }

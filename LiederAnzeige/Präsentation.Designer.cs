@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.la_titel = new System.Windows.Forms.Label();
-            this.la_text = new System.Windows.Forms.Label();
-            this.la_akVers = new System.Windows.Forms.Label();
+            this.LA_titel = new System.Windows.Forms.Label();
+            this.LA_text = new System.Windows.Forms.Label();
+            this.LA_akVers = new System.Windows.Forms.Label();
             this.pbHintergrund = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHintergrund)).BeginInit();
             this.pbHintergrund.SuspendLayout();
             this.SuspendLayout();
             // 
-            // la_titel
+            // LA_titel
             // 
-            this.la_titel.BackColor = System.Drawing.Color.Transparent;
-            this.la_titel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.la_titel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.la_titel.ForeColor = System.Drawing.Color.White;
-            this.la_titel.Location = new System.Drawing.Point(0, 0);
-            this.la_titel.Name = "la_titel";
-            this.la_titel.Size = new System.Drawing.Size(1000, 100);
-            this.la_titel.TabIndex = 0;
-            this.la_titel.Text = "Titel";
-            this.la_titel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LA_titel.BackColor = System.Drawing.Color.Transparent;
+            this.LA_titel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LA_titel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LA_titel.ForeColor = System.Drawing.Color.White;
+            this.LA_titel.Location = new System.Drawing.Point(0, 0);
+            this.LA_titel.Name = "LA_titel";
+            this.LA_titel.Size = new System.Drawing.Size(1000, 100);
+            this.LA_titel.TabIndex = 0;
+            this.LA_titel.Text = "Titel";
+            this.LA_titel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // la_text
+            // LA_text
             // 
-            this.la_text.BackColor = System.Drawing.Color.Transparent;
-            this.la_text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.la_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.la_text.ForeColor = System.Drawing.Color.White;
-            this.la_text.Location = new System.Drawing.Point(0, 100);
-            this.la_text.Name = "la_text";
-            this.la_text.Size = new System.Drawing.Size(1000, 500);
-            this.la_text.TabIndex = 1;
-            this.la_text.Text = "Vers";
-            this.la_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LA_text.BackColor = System.Drawing.Color.Transparent;
+            this.LA_text.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LA_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LA_text.ForeColor = System.Drawing.Color.White;
+            this.LA_text.Location = new System.Drawing.Point(0, 100);
+            this.LA_text.Name = "LA_text";
+            this.LA_text.Size = new System.Drawing.Size(1000, 500);
+            this.LA_text.TabIndex = 1;
+            this.LA_text.Text = "Vers";
+            this.LA_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // la_akVers
+            // LA_akVers
             // 
-            this.la_akVers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.la_akVers.AutoSize = true;
-            this.la_akVers.BackColor = System.Drawing.Color.Transparent;
-            this.la_akVers.ForeColor = System.Drawing.Color.Transparent;
-            this.la_akVers.Location = new System.Drawing.Point(890, 578);
-            this.la_akVers.Name = "la_akVers";
-            this.la_akVers.Size = new System.Drawing.Size(98, 13);
-            this.la_akVers.TabIndex = 2;
-            this.la_akVers.Text = "1 / 2 / 3 / 4 / 5 / 6";
-            this.la_akVers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LA_akVers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LA_akVers.AutoSize = true;
+            this.LA_akVers.BackColor = System.Drawing.Color.Transparent;
+            this.LA_akVers.ForeColor = System.Drawing.Color.Transparent;
+            this.LA_akVers.Location = new System.Drawing.Point(890, 578);
+            this.LA_akVers.Name = "LA_akVers";
+            this.LA_akVers.Size = new System.Drawing.Size(98, 13);
+            this.LA_akVers.TabIndex = 2;
+            this.LA_akVers.Text = "1 / 2 / 3 / 4 / 5 / 6";
+            this.LA_akVers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pbHintergrund
             // 
@@ -81,8 +81,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbHintergrund.BackColor = System.Drawing.Color.Transparent;
-            this.pbHintergrund.Controls.Add(this.la_text);
-            this.pbHintergrund.Controls.Add(this.la_titel);
+            this.pbHintergrund.Controls.Add(this.LA_text);
+            this.pbHintergrund.Controls.Add(this.LA_titel);
             this.pbHintergrund.ErrorImage = null;
             this.pbHintergrund.InitialImage = null;
             this.pbHintergrund.Location = new System.Drawing.Point(0, 0);
@@ -97,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.la_akVers);
+            this.Controls.Add(this.LA_akVers);
             this.Controls.Add(this.pbHintergrund);
             this.Name = "Präsentation";
             this.Text = "Präsentation";
@@ -112,9 +112,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label la_titel;
-        private System.Windows.Forms.Label la_text;
-        private System.Windows.Forms.Label la_akVers;
+        private System.Windows.Forms.Label LA_titel;
+        private System.Windows.Forms.Label LA_text;
+        private System.Windows.Forms.Label LA_akVers;
         private System.Windows.Forms.PictureBox pbHintergrund;
     }
 }

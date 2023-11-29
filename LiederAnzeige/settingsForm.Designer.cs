@@ -35,13 +35,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtb_initialText = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.la_font = new System.Windows.Forms.Label();
-            this.bt_Fontändern = new System.Windows.Forms.Button();
-            this.la_schriftfarbe = new System.Windows.Forms.Label();
-            this.la_hintergrundfarbe = new System.Windows.Forms.Label();
-            this.bt_schriftfarbeändern = new System.Windows.Forms.Button();
-            this.bt_hintergrundfrabeändern = new System.Windows.Forms.Button();
             this.bt_vorschau = new System.Windows.Forms.Button();
+            this.bt_hintergrundfrabeändern = new System.Windows.Forms.Button();
+            this.bt_schriftfarbeändern = new System.Windows.Forms.Button();
+            this.la_hintergrundfarbe = new System.Windows.Forms.Label();
+            this.la_schriftfarbe = new System.Windows.Forms.Label();
+            this.bt_Fontändern = new System.Windows.Forms.Button();
+            this.la_font = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -127,52 +127,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Schrift und Farbe";
             // 
-            // la_font
+            // bt_vorschau
             // 
-            this.la_font.AutoSize = true;
-            this.la_font.Location = new System.Drawing.Point(7, 20);
-            this.la_font.Name = "la_font";
-            this.la_font.Size = new System.Drawing.Size(164, 13);
-            this.la_font.TabIndex = 0;
-            this.la_font.Text = "Font: Microsoft Sans Serif; 8,25pt";
-            // 
-            // bt_Fontändern
-            // 
-            this.bt_Fontändern.Location = new System.Drawing.Point(227, 15);
-            this.bt_Fontändern.Name = "bt_Fontändern";
-            this.bt_Fontändern.Size = new System.Drawing.Size(75, 23);
-            this.bt_Fontändern.TabIndex = 1;
-            this.bt_Fontändern.Text = "ändern";
-            this.bt_Fontändern.UseVisualStyleBackColor = true;
-            this.bt_Fontändern.Click += new System.EventHandler(this.bt_Fontändern_Click);
-            // 
-            // la_schriftfarbe
-            // 
-            this.la_schriftfarbe.AutoSize = true;
-            this.la_schriftfarbe.Location = new System.Drawing.Point(7, 49);
-            this.la_schriftfarbe.Name = "la_schriftfarbe";
-            this.la_schriftfarbe.Size = new System.Drawing.Size(64, 13);
-            this.la_schriftfarbe.TabIndex = 2;
-            this.la_schriftfarbe.Text = "Schriftfarbe:";
-            // 
-            // la_hintergrundfarbe
-            // 
-            this.la_hintergrundfarbe.AutoSize = true;
-            this.la_hintergrundfarbe.Location = new System.Drawing.Point(7, 78);
-            this.la_hintergrundfarbe.Name = "la_hintergrundfarbe";
-            this.la_hintergrundfarbe.Size = new System.Drawing.Size(89, 13);
-            this.la_hintergrundfarbe.TabIndex = 3;
-            this.la_hintergrundfarbe.Text = "Hintergrundfarbe:";
-            // 
-            // bt_schriftfarbeändern
-            // 
-            this.bt_schriftfarbeändern.Location = new System.Drawing.Point(227, 44);
-            this.bt_schriftfarbeändern.Name = "bt_schriftfarbeändern";
-            this.bt_schriftfarbeändern.Size = new System.Drawing.Size(75, 23);
-            this.bt_schriftfarbeändern.TabIndex = 4;
-            this.bt_schriftfarbeändern.Text = "ändern";
-            this.bt_schriftfarbeändern.UseVisualStyleBackColor = true;
-            this.bt_schriftfarbeändern.Click += new System.EventHandler(this.bt_schriftfarbeändern_Click);
+            this.bt_vorschau.Location = new System.Drawing.Point(10, 102);
+            this.bt_vorschau.Name = "bt_vorschau";
+            this.bt_vorschau.Size = new System.Drawing.Size(292, 23);
+            this.bt_vorschau.TabIndex = 6;
+            this.bt_vorschau.Text = "Vorschau";
+            this.bt_vorschau.UseVisualStyleBackColor = true;
+            this.bt_vorschau.Click += new System.EventHandler(this.bt_vorschau_Click);
             // 
             // bt_hintergrundfrabeändern
             // 
@@ -184,24 +147,63 @@
             this.bt_hintergrundfrabeändern.UseVisualStyleBackColor = true;
             this.bt_hintergrundfrabeändern.Click += new System.EventHandler(this.bt_hintergrundfrabeändern_Click);
             // 
-            // bt_vorschau
+            // bt_schriftfarbeändern
             // 
-            this.bt_vorschau.Location = new System.Drawing.Point(10, 102);
-            this.bt_vorschau.Name = "bt_vorschau";
-            this.bt_vorschau.Size = new System.Drawing.Size(292, 23);
-            this.bt_vorschau.TabIndex = 6;
-            this.bt_vorschau.Text = "Vorschau";
-            this.bt_vorschau.UseVisualStyleBackColor = true;
-            this.bt_vorschau.Click += new System.EventHandler(this.bt_vorschau_Click);
+            this.bt_schriftfarbeändern.Location = new System.Drawing.Point(227, 44);
+            this.bt_schriftfarbeändern.Name = "bt_schriftfarbeändern";
+            this.bt_schriftfarbeändern.Size = new System.Drawing.Size(75, 23);
+            this.bt_schriftfarbeändern.TabIndex = 4;
+            this.bt_schriftfarbeändern.Text = "ändern";
+            this.bt_schriftfarbeändern.UseVisualStyleBackColor = true;
+            this.bt_schriftfarbeändern.Click += new System.EventHandler(this.bt_schriftfarbeändern_Click);
+            // 
+            // la_hintergrundfarbe
+            // 
+            this.la_hintergrundfarbe.AutoSize = true;
+            this.la_hintergrundfarbe.Location = new System.Drawing.Point(7, 78);
+            this.la_hintergrundfarbe.Name = "la_hintergrundfarbe";
+            this.la_hintergrundfarbe.Size = new System.Drawing.Size(89, 13);
+            this.la_hintergrundfarbe.TabIndex = 3;
+            this.la_hintergrundfarbe.Text = "Hintergrundfarbe:";
+            // 
+            // la_schriftfarbe
+            // 
+            this.la_schriftfarbe.AutoSize = true;
+            this.la_schriftfarbe.Location = new System.Drawing.Point(7, 49);
+            this.la_schriftfarbe.Name = "la_schriftfarbe";
+            this.la_schriftfarbe.Size = new System.Drawing.Size(64, 13);
+            this.la_schriftfarbe.TabIndex = 2;
+            this.la_schriftfarbe.Text = "Schriftfarbe:";
+            // 
+            // bt_Fontändern
+            // 
+            this.bt_Fontändern.Location = new System.Drawing.Point(227, 15);
+            this.bt_Fontändern.Name = "bt_Fontändern";
+            this.bt_Fontändern.Size = new System.Drawing.Size(75, 23);
+            this.bt_Fontändern.TabIndex = 1;
+            this.bt_Fontändern.Text = "ändern";
+            this.bt_Fontändern.UseVisualStyleBackColor = true;
+            this.bt_Fontändern.Click += new System.EventHandler(this.bt_Fontändern_Click);
+            // 
+            // la_font
+            // 
+            this.la_font.AutoSize = true;
+            this.la_font.Location = new System.Drawing.Point(7, 20);
+            this.la_font.Name = "la_font";
+            this.la_font.Size = new System.Drawing.Size(164, 13);
+            this.la_font.TabIndex = 0;
+            this.la_font.Text = "Font: Microsoft Sans Serif; 8,25pt";
             // 
             // settingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 450);
+            this.ClientSize = new System.Drawing.Size(334, 354);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(350, 393);
+            this.MinimumSize = new System.Drawing.Size(350, 393);
             this.Name = "settingsForm";
             this.Text = "Einstellungen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.settingsForm_FormClosing);

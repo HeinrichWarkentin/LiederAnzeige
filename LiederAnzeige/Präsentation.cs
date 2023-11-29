@@ -22,21 +22,21 @@ namespace LiederAnzeige
         {
             if (pTitel == "")
             {
-                la_titel.Height = 0;
+                LA_titel.Height = 0;
             }
             else
             {
-                la_titel.Height = la_titel.Font.Height * 2;
+                LA_titel.Height = LA_titel.Font.Height * 2;
             }
-            la_titel.Text = pTitel;
+            LA_titel.Text = pTitel;
         }
         public void setText(string pText)
         {
-            la_text.Text = pText;
+            LA_text.Text = pText;
         }
         public void setakVers(string pVersInfo)
         {
-            la_akVers.Text = pVersInfo;
+            LA_akVers.Text = pVersInfo;
         }
 
         public void setBild(Image pImage, PictureBoxSizeMode pMode)
@@ -53,21 +53,21 @@ namespace LiederAnzeige
 
         public void setFont(Font pFont)
         {
-            la_text.Font = pFont;
-            la_titel.Font = pFont;
+            LA_text.Font = pFont;
+            LA_titel.Font = pFont;
         }
         public void setBackgroundColor(Color pColor)
         {
-            la_titel.BackColor = Color.Transparent;
-            la_text.BackColor = Color.Transparent;
-            la_akVers.BackColor = Color.Transparent;
+            LA_titel.BackColor = Color.Transparent;
+            LA_text.BackColor = Color.Transparent;
+            LA_akVers.BackColor = Color.Transparent;
             this.BackColor = pColor;
         }
         public void setFontColor(Color pColor)
         {
-            la_akVers.ForeColor = pColor;
-            la_text.ForeColor = pColor;
-            la_titel.ForeColor = pColor;
+            LA_akVers.ForeColor = pColor;
+            LA_text.ForeColor = pColor;
+            LA_titel.ForeColor = pColor;
 
         }
 

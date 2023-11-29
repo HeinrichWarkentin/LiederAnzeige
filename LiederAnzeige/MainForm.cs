@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LiederAnzeige.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -14,29 +16,52 @@ namespace LiederAnzeige
 {
     public partial class MainForm : Form
     {
-        Präsentation präsentation;
-        manuellerText manuelleTexteingabe;
-        bilderForm bilderAnzeige;
-        neuesLiedForm neuesLiederstellen;
-        settingsForm einstellungen;
+        private readonly Präsentation präsentation;
+        private readonly manuellerText manuelleTexteingabe;
+        private readonly bilderForm bilderAnzeige;
+        private readonly neuesLiedForm neuesLiederstellen;
+        private readonly settingsForm einstellungen;
+        private readonly DBLiederbücherForm liederbücherForm;
+        private readonly DBLieder liederDatenbank;
+        private readonly MSSQLDatenbank Datenbank;
+        private readonly simpleEditor simpleEditor;
+
+        public readonly string akTitel;
+        public readonly int akTitelNR;
+        public readonly string akSongPfad;
+        public readonly int akLiederbuch;
+
+        private readonly List<(int, string, string, string)> Suchergebnis;
 
         public MainForm()
         {
             InitializeComponent();
            
-            scaliereFolien();
+            ScaliereFolien();
             präsentation = new Präsentation();
             manuelleTexteingabe = new manuellerText(präsentation);
             bilderAnzeige = new bilderForm(präsentation);
             einstellungen = new settingsForm();
+            Datenbank = new MSSQLDatenbank(Properties.Settings.Default.DB_LiederAnzeigeConnectionString);
+            liederbücherForm = new DBLiederbücherForm();
+            liederDatenbank = new DBLieder();
+            simpleEditor = new simpleEditor(this);
 
 
-
+            Add_default_Liederbuch();
+            Load_Liederbücher();
             neuesLiederstellen = new neuesLiedForm();
-        }
+            Suchergebnis = new List<(int, string, string, string)>();
+
+            //Aktuelles Lied
+            //akTitel = 
+            //akTitelNR = 
+            //akSongPfad =
+            //akLiederbuch
+    }
         
 
-        private void scaliereFolien()
+        private void ScaliereFolien()
         {
             
             int p_auflösung_b = Screen.AllScreens[1].Bounds.Width;
@@ -48,7 +73,7 @@ namespace LiederAnzeige
             int abstand = 5;
 
             int scalierungsFaktor = 1;
-            Button[] btns_Folien = { this.bt_folie_1, this.bt_folie_2, this.bt_folie_3, this.bt_folie_4, this.bt_folie_5, this.bt_folie_6, this.bt_folie_7, this.bt_folie_8, this.bt_folie_9 };
+            Button[] btns_Folien = { this.BT_folie_1, this.BT_folie_2, this.BT_folie_3, this.BT_folie_4, this.BT_folie_5, this.BT_folie_6, this.BT_folie_7, this.BT_folie_8, this.BT_folie_9 };
 
             double buttonHöhe;
             double buttonBreite;
@@ -99,7 +124,7 @@ namespace LiederAnzeige
         }
 
         //präsentation
-        private void präsentationStartenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PräsentationStartenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Screen.AllScreens.Length > 1)
             {
@@ -123,12 +148,12 @@ namespace LiederAnzeige
             präsentation.Show();
         }
 
-        private void präsentationStoppenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PräsentationStoppenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             präsentation.Hide();
         }
 
-        private void leerenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             präsentation.setText("");
             präsentation.setTitel("");
@@ -136,12 +161,12 @@ namespace LiederAnzeige
             präsentation.setBild(null, PictureBoxSizeMode.Zoom);
         }
 
-        private void nurBildLeerenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NurBildLeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             präsentation.setBild(null, PictureBoxSizeMode.Zoom);
         }
 
-        private void nurTextLeerenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NurTextLeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             präsentation.setText("");
             präsentation.setTitel("");
@@ -150,14 +175,14 @@ namespace LiederAnzeige
         //präsentation ende
         
 
-        private void manuellerTextToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ManuellerTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             manuelleTexteingabe.Show();
             manuelleTexteingabe.Select();
 
         }
 
-        private void bilderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BilderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bilderAnzeige.Show();
             bilderAnzeige.Select();
@@ -209,19 +234,19 @@ namespace LiederAnzeige
             Properties.Settings.Default.Save();
         }
 
-        private void neuesLiedErstellenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NeuesLiedErstellenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             neuesLiederstellen.Show();
             neuesLiederstellen.Select();
         }
 
-        private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EinstellungenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             einstellungen.Show();
             einstellungen.Select();
         }
 
-        private void nachUpdatesSuchenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NachUpdatesSuchenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -232,6 +257,102 @@ namespace LiederAnzeige
                 MessageBox.Show(f.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void CB_Liederbuecher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void Load_Liederbücher()
+        {
+            SqlCommand command = new SqlCommand("SELECT Name FROM [dbo].Liederbücher");
+            CB_Liederbuecher.Items.Clear();
+            CB_Liederbuecher.Items.AddRange(Datenbank.returningCommandListString(command, 0).ToArray());
+            CB_Liederbuecher.Items.Add("@ Alle");
+        }
+
+        private void Add_default_Liederbuch()
+        {
+            string commandstring = "INSERT INTO [dbo].Liederbücher (Name, Verlag) VALUES ('@ kein Liederbuch', 'None');";
+            SqlCommand command = new SqlCommand(commandstring);
+            Datenbank.nonReturningCommand(command);
+        }
+
+        private void LiederbücherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            liederbücherForm.Show();
+            liederbücherForm.Select();
+        }
+
+        private void CB_Liederbuecher_DropDown(object sender, EventArgs e)
+        {
+            Load_Liederbücher();
+        }
+
+        private void TB_suchefeld_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private List<string> Suche_nach_Lied(string pLiederbuch, string pSuchtext)
+        {
+            List<string> Rückgabeliste = new List<string>();
+            string SQLCommandstring;
+            if (pLiederbuch == "@ Alle")
+            {
+                //Durchsuche alle Liederbücher
+                SQLCommandstring = "SELECT Titelnummer, Titel, Liederbuch, DateiPfad FROM dbo.Lieder WHERE (Titelnummer = " + pSuchtext + " OR Titel = '" + pSuchtext + "');";
+            }
+            else
+            {
+                SQLCommandstring = "SELECT Titelnummer, Titel, Liederbuch, DateiPfad FROM dbo.Lieder WHERE (Titelnummer = " + pSuchtext + " OR Titel = '" + pSuchtext + "') AND Liederbuch = '" + pLiederbuch + "';";
+            }
+            SqlCommand SQLcommand = new SqlCommand(SQLCommandstring);
+            Datenbank.returningCommandmultiColumntoCache(SQLcommand);
+
+            List<int> SuchergebnisTitelnummer = Datenbank.readfromCachedDataInt(0);
+            List<string> SuchergebnisTitel= Datenbank.readfromCachedDataString(1);
+            List<string> SuchergebnisLiedebuch = Datenbank.readfromCachedDataString(2);
+            List<string> SuchergebnisDateiPfad = Datenbank.readfromCachedDataString(3);
+            
+            if (SuchergebnisTitelnummer.Count == SuchergebnisTitel.Count && SuchergebnisLiedebuch.Count == SuchergebnisTitel.Count && SuchergebnisLiedebuch.Count == SuchergebnisDateiPfad.Count)
+            {
+                for (int i = 0; i < SuchergebnisTitelnummer.Count; i++)
+                {
+                    // Erstellen eines neuen Person-Objekts und Hinzufügen zur Datenliste
+                    Suchergebnis.Add((SuchergebnisTitelnummer[i], SuchergebnisTitel[i], SuchergebnisLiedebuch[i], SuchergebnisDateiPfad[i]));
+                    Rückgabeliste.Add(SuchergebnisTitelnummer[i].ToString() + " | "+ SuchergebnisTitel[i] + " | " + SuchergebnisLiedebuch[i]);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Die Listen haben unterschiedliche Längen.");
+            }
+            //Ausgabe
+            
+
+
+            return Rückgabeliste;
+        }
+
+        private void LiederDatenbankToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            liederDatenbank.Show();
+            liederDatenbank.Select();
+        }
+
+        private void EditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            simpleEditor.Show();
+            simpleEditor.Select();
+        }
+
+        public void AktuellesLiedBearbeitet()
+        {
+
         }
     }
 }

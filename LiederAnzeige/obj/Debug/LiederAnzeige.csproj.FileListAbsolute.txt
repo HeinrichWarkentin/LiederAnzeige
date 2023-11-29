@@ -43,5 +43,10 @@ C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederA
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.neuesLiedForm.resources
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.settingsForm.resources
 C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.akScreenForm.resources
-C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Datenbank\SQL_Datenbank.mdf
-C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Datenbank\SQL_Datenbank_log.ldf
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Datenbank\DB_LiederAnzeige.mdf
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Datenbank\DB_LiederAnzeige_log.ldf
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Dapper.dll
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\bin\Debug\Dapper.xml
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.DBLiederbücherForm.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.DBLieder.resources
+C:\Users\Heinrich\Documents\GitHub\LiederAnzeige\LiederAnzeige\obj\Debug\LiederAnzeige.simpleEditor.resources

@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -58,6 +60,9 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.143\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -79,8 +84,8 @@
     <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=7.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Json.7.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -93,7 +98,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -111,7 +118,28 @@
     <Compile Include="bilderForm.Designer.cs">
       <DependentUpon>bilderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseSQL.cs" />
+    <Compile Include="Datenbank\DB_LiederAnzeigeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_LiederAnzeigeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Lieder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_Lieder.Designer.cs">
+      <DependentUpon>DB_Lieder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_LiederAnzeigeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_LiederAnzeigeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Liederbücher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_Liederbücher.Designer.cs">
+      <DependentUpon>DB_Liederbücher.cs</DependentUpon>
+    </Compile>
     <Compile Include="lied.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +153,7 @@
     <Compile Include="manuellerText.Designer.cs">
       <DependentUpon>manuellerText.cs</DependentUpon>
     </Compile>
+    <Compile Include="MSSQLDatenbank.cs" />
     <Compile Include="neuesLiedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,11 +174,23 @@
     <Compile Include="settingsForm.Designer.cs">
       <DependentUpon>settingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="simpleEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="simpleEditor.Designer.cs">
+      <DependentUpon>simpleEditor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="akScreenForm.resx">
       <DependentUpon>akScreenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bilderForm.resx">
       <DependentUpon>bilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB_Lieder.resx">
+      <DependentUpon>DB_Lieder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB_Liederbücher.resx">
+      <DependentUpon>DB_Liederbücher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -176,6 +217,31 @@
     <EmbeddedResource Include="settingsForm.resx">
       <DependentUpon>settingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="simpleEditor.resx">
+      <DependentUpon>simpleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Datenbank\DB_LiederAnzeigeDataSet.xsc">
+      <DependentUpon>DB_LiederAnzeigeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datenbank\DB_LiederAnzeigeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_LiederAnzeigeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datenbank\DB_LiederAnzeigeDataSet.xss">
+      <DependentUpon>DB_LiederAnzeigeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_LiederAnzeigeDataSet.xsc">
+      <DependentUpon>DB_LiederAnzeigeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_LiederAnzeigeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_LiederAnzeigeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_LiederAnzeigeDataSet.xss">
+      <DependentUpon>DB_LiederAnzeigeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -208,12 +274,12 @@
     <Folder Include="Liederbuecher\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Datenbank\SQL_Datenbank.mdf">
+    <Content Include="Datenbank\DB_LiederAnzeige.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Datenbank\SQL_Datenbank_log.ldf">
+    <Content Include="Datenbank\DB_LiederAnzeige_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>SQL_Datenbank.mdf</DependentUpon>
+      <DependentUpon>DB_LiederAnzeige.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
