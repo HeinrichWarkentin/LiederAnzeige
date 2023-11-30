@@ -52,14 +52,14 @@ namespace LiederAnzeige
         {
             if (tb_ueberschrift.Text == null)
             {
-                präsentation.setTitel("");
+                präsentation.SetTitel("");
             }
             else
             {
-                präsentation.setTitel(tb_ueberschrift.Text);
+                präsentation.SetTitel(tb_ueberschrift.Text);
             }
-            präsentation.setText(rtb_text.Text);
-            präsentation.setakVers("");
+            präsentation.SetText(rtb_text.Text);
+            präsentation.SetakVers("");
         }
 
         private void manuellerText_Load(object sender, EventArgs e)

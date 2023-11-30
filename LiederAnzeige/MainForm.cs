@@ -18,7 +18,7 @@ namespace LiederAnzeige
     {
         private readonly Präsentation präsentation;
         private readonly manuellerText manuelleTexteingabe;
-        private readonly bilderForm bilderAnzeige;
+        private readonly BilderForm bilderAnzeige;
         private readonly neuesLiedForm neuesLiederstellen;
         private readonly settingsForm einstellungen;
         private readonly DBLiederbücherForm liederbücherForm;
@@ -40,7 +40,7 @@ namespace LiederAnzeige
             ScaliereFolien();
             präsentation = new Präsentation();
             manuelleTexteingabe = new manuellerText(präsentation);
-            bilderAnzeige = new bilderForm(präsentation);
+            bilderAnzeige = new BilderForm(präsentation);
             einstellungen = new settingsForm();
             Datenbank = new MSSQLDatenbank(Properties.Settings.Default.DB_LiederAnzeigeConnectionString);
             liederbücherForm = new DBLiederbücherForm();
@@ -155,22 +155,22 @@ namespace LiederAnzeige
 
         private void LeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            präsentation.setText("");
-            präsentation.setTitel("");
-            präsentation.setakVers("");
-            präsentation.setBild(null, PictureBoxSizeMode.Zoom);
+            präsentation.SetText("");
+            präsentation.SetTitel("");
+            präsentation.SetakVers("");
+            präsentation.SetBild(null, PictureBoxSizeMode.Zoom);
         }
 
         private void NurBildLeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            präsentation.setBild(null, PictureBoxSizeMode.Zoom);
+            präsentation.SetBild(null, PictureBoxSizeMode.Zoom);
         }
 
         private void NurTextLeerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            präsentation.setText("");
-            präsentation.setTitel("");
-            präsentation.setakVers("");
+            präsentation.SetText("");
+            präsentation.SetTitel("");
+            präsentation.SetakVers("");
         }
         //präsentation ende
         
@@ -353,6 +353,18 @@ namespace LiederAnzeige
         public void AktuellesLiedBearbeitet()
         {
 
+        }
+
+        private void BT_text_groesser_Click(object sender, EventArgs e)
+        {
+            Font AKFont = präsentation.GetFont();
+            präsentation.SetFont(new Font(AKFont.Name, AKFont.Size + 5, AKFont.Style));
+        }
+
+        private void BT_text_kleiner_Click(object sender, EventArgs e)
+        {
+            Font AKFont = präsentation.GetFont();
+            präsentation.SetFont(new Font(AKFont.Name, AKFont.Size - 5, AKFont.Style));
         }
     }
 }

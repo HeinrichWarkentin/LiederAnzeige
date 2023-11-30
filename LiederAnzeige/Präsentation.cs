@@ -18,7 +18,7 @@ namespace LiederAnzeige
             InitializeComponent();
         }
 
-        public void setTitel(string pTitel)
+        public void SetTitel(string pTitel)
         {
             if (pTitel == "")
             {
@@ -30,16 +30,16 @@ namespace LiederAnzeige
             }
             LA_titel.Text = pTitel;
         }
-        public void setText(string pText)
+        public void SetText(string pText)
         {
             LA_text.Text = pText;
         }
-        public void setakVers(string pVersInfo)
+        public void SetakVers(string pVersInfo)
         {
             LA_akVers.Text = pVersInfo;
         }
 
-        public void setBild(Image pImage, PictureBoxSizeMode pMode)
+        public void SetBild(Image pImage, PictureBoxSizeMode pMode)
         {
             this.pbHintergrund.Image = pImage;
             this.pbHintergrund.SizeMode= pMode;
@@ -51,24 +51,29 @@ namespace LiederAnzeige
             e.Cancel = true;
         }
 
-        public void setFont(Font pFont)
+        public void SetFont(Font pFont)
         {
             LA_text.Font = pFont;
             LA_titel.Font = pFont;
         }
-        public void setBackgroundColor(Color pColor)
+        public void SetBackgroundColor(Color pColor)
         {
             LA_titel.BackColor = Color.Transparent;
             LA_text.BackColor = Color.Transparent;
             LA_akVers.BackColor = Color.Transparent;
             this.BackColor = pColor;
         }
-        public void setFontColor(Color pColor)
+        public void SetFontColor(Color pColor)
         {
             LA_akVers.ForeColor = pColor;
             LA_text.ForeColor = pColor;
             LA_titel.ForeColor = pColor;
 
+        }
+
+        public Font GetFont()
+        {
+            return LA_text.Font;
         }
 
         private void Präsentation_KeyDown(object sender, KeyEventArgs e)

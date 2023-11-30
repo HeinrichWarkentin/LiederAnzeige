@@ -12,10 +12,10 @@ using System.Xml.Linq;
 
 namespace LiederAnzeige
 {
-    public partial class bilderForm : Form
+    public partial class BilderForm : Form
     {
 
-        public bilderForm(Präsentation ppräsentation)
+        public BilderForm(Präsentation ppräsentation)
         {
             präsentation = ppräsentation;
             InitializeComponent();
@@ -83,10 +83,10 @@ namespace LiederAnzeige
         {
             if (!cB_mitText.Checked)
             {
-                präsentation.setText("");
-                präsentation.setTitel("");
+                präsentation.SetText("");
+                präsentation.SetTitel("");
             }
-            präsentation.setBild(pb_vorschau.Image, pb_vorschau.SizeMode);
+            präsentation.SetBild(pb_vorschau.Image, pb_vorschau.SizeMode);
         }
 
         private void cb_anzeigeArt_SelectedIndexChanged(object sender, EventArgs e)

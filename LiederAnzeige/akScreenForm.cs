@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace LiederAnzeige
 {
-    public partial class akScreenForm : Form
+    public partial class AKScreenForm : Form
     {
-        public akScreenForm()
+        public AKScreenForm()
         {
             InitializeComponent();
         }
-        public void setNumber(int pNum)
+        public void SetNumber(int pNum)
         {
-            label1.Text = pNum.ToString();
+            Label1.Text = pNum.ToString();
         }
 
-        private void akScreenForm_Load(object sender, EventArgs e)
+        private void AKScreenForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             this.Close();
         }

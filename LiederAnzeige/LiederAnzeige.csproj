@@ -106,17 +106,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="akScreenForm.cs">
+    <Compile Include="AKScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="akScreenForm.Designer.cs">
-      <DependentUpon>akScreenForm.cs</DependentUpon>
+    <Compile Include="AKScreenForm.Designer.cs">
+      <DependentUpon>AKScreenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="bilderForm.cs">
+    <Compile Include="BilderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bilderForm.Designer.cs">
-      <DependentUpon>bilderForm.cs</DependentUpon>
+    <Compile Include="BilderForm.Designer.cs">
+      <DependentUpon>BilderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Datenbank\DB_LiederAnzeigeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -180,11 +180,11 @@
     <Compile Include="simpleEditor.Designer.cs">
       <DependentUpon>simpleEditor.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="akScreenForm.resx">
-      <DependentUpon>akScreenForm.cs</DependentUpon>
+    <EmbeddedResource Include="AKScreenForm.resx">
+      <DependentUpon>AKScreenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bilderForm.resx">
-      <DependentUpon>bilderForm.cs</DependentUpon>
+    <EmbeddedResource Include="BilderForm.resx">
+      <DependentUpon>BilderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DB_Lieder.resx">
       <DependentUpon>DB_Lieder.cs</DependentUpon>

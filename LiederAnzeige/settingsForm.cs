@@ -43,9 +43,9 @@ namespace LiederAnzeige
 
             for (int i = 0; i < screens.Length; i++)
             {
-                akScreenForm akScreen = new akScreenForm();
+                AKScreenForm akScreen = new AKScreenForm();
                 int monitorNummer = i + 1;
-                akScreen.setNumber(monitorNummer);
+                akScreen.SetNumber(monitorNummer);
                 akScreen.Location = screens[i].WorkingArea.Location;
                 akScreen.Select();
                 akScreen.Show();
@@ -164,28 +164,28 @@ namespace LiederAnzeige
 
         private void vorschauAktualliesieren()
         {
-            testpräsi.setText(Properties.Settings.Default.initalText);
+            testpräsi.SetText(Properties.Settings.Default.initalText);
 
-            testpräsi.setTitel("Beispiel Titel");
-            testpräsi.setFont(Properties.Settings.Default.TextFont);
+            testpräsi.SetTitel("Beispiel Titel");
+            testpräsi.SetFont(Properties.Settings.Default.TextFont);
 
 
-            testpräsi.setFontColor(Properties.Settings.Default.TextSchriftFarbe);
-            testpräsi.setBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
+            testpräsi.SetFontColor(Properties.Settings.Default.TextSchriftFarbe);
+            testpräsi.SetBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
         }
         private void bt_vorschau_Click(object sender, EventArgs e)
         {
             if (bt_vorschau.Text == "Vorschau")
             {
                 bt_vorschau.Text = "Vorschau beenden";
-                testpräsi.setText(Properties.Settings.Default.initalText);
+                testpräsi.SetText(Properties.Settings.Default.initalText);
 
-                testpräsi.setTitel("Beispiel Titel");
-                testpräsi.setFont(Properties.Settings.Default.TextFont);
+                testpräsi.SetTitel("Beispiel Titel");
+                testpräsi.SetFont(Properties.Settings.Default.TextFont);
 
 
-                testpräsi.setFontColor(Properties.Settings.Default.TextSchriftFarbe);
-                testpräsi.setBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
+                testpräsi.SetFontColor(Properties.Settings.Default.TextSchriftFarbe);
+                testpräsi.SetBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
                 testpräsi.Show();
                 
             }

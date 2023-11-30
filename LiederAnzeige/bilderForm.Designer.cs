@@ -1,6 +1,6 @@
 ﻿namespace LiederAnzeige
 {
-    partial class bilderForm
+    partial class BilderForm
     {
         /// <summary>
         /// Required designer variable.

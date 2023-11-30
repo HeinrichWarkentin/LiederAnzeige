@@ -324,6 +324,7 @@ namespace LiederAnzeige
             this.BT_text_kleiner.TabIndex = 1;
             this.BT_text_kleiner.Text = "Text kleiner";
             this.BT_text_kleiner.UseVisualStyleBackColor = true;
+            this.BT_text_kleiner.Click += new System.EventHandler(this.BT_text_kleiner_Click);
             // 
             // BT_text_groesser
             // 
@@ -333,6 +334,7 @@ namespace LiederAnzeige
             this.BT_text_groesser.TabIndex = 0;
             this.BT_text_groesser.Text = "Text größer";
             this.BT_text_groesser.UseVisualStyleBackColor = true;
+            this.BT_text_groesser.Click += new System.EventHandler(this.BT_text_groesser_Click);
             // 
             // groupBox3
             // 
