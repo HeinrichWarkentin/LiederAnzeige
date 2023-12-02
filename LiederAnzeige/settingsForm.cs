@@ -12,32 +12,34 @@ using System.Windows.Forms;
 
 namespace LiederAnzeige
 {
-    public partial class settingsForm : Form
+    public partial class SettingsForm : Form
     {
-        Präsentation testpräsi;
-        public settingsForm()
+        private readonly Präsentation testpräsi;
+        public SettingsForm()
         {
             InitializeComponent();
             testpräsi = new Präsentation();
         }
 
-        private void cb_Bildschirme_SelectedIndexChanged(object sender, EventArgs e)
+        private void CB_Bildschirme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.anzeigeMonitor = cb_Bildschirme.SelectedIndex;
+            Properties.Settings.Default.anzeigeMonitor = CB_Bildschirme.SelectedIndex;
+            if (Screen.AllScreens.Length > 1)
+                testpräsi.Location = Screen.AllScreens[CB_Bildschirme.SelectedIndex].WorkingArea.Location;
         }
 
-        private void cb_Bildschirme_DropDown(object sender, EventArgs e)
+        private void CB_Bildschirme_DropDown(object sender, EventArgs e)
         {
-            cb_Bildschirme.Items.Clear();
+            CB_Bildschirme.Items.Clear();
             Screen[] screens = Screen.AllScreens;
 
             for (int i = 0; i < screens.Length; i++)
             {
-                cb_Bildschirme.Items.Add((i+1) +": "+ Screen.AllScreens[i].Bounds.Width.ToString() + " x " + Screen.AllScreens[i].Bounds.Height.ToString());
+                CB_Bildschirme.Items.Add((i+1) +": "+ Screen.AllScreens[i].Bounds.Width.ToString() + " x " + Screen.AllScreens[i].Bounds.Height.ToString());
             }
         }
 
-        private void bt_show_bildschirme_Click(object sender, EventArgs e)
+        private void BT_show_bildschirme_Click(object sender, EventArgs e)
         {
             Screen[] screens = Screen.AllScreens;
 
@@ -54,7 +56,7 @@ namespace LiederAnzeige
 
         }
 
-        private void settingsForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void SettingsForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (WindowState == FormWindowState.Maximized)
             {
@@ -77,7 +79,7 @@ namespace LiederAnzeige
                 Properties.Settings.Default.settingsFormMaximised = false;
                 Properties.Settings.Default.settingsFormMinimised = true;
             }
-            Properties.Settings.Default.anzeigeMonitor = cb_Bildschirme.SelectedIndex;
+            Properties.Settings.Default.anzeigeMonitor = CB_Bildschirme.SelectedIndex;
             Properties.Settings.Default.Save();
 
             this.Hide();
@@ -85,15 +87,15 @@ namespace LiederAnzeige
 
         }
 
-        private void settingsForm_Load(object sender, EventArgs e)
+        private void SettingsForm_Load(object sender, EventArgs e)
         {
-            if (cb_Bildschirme.Items.Count - 1 < Properties.Settings.Default.anzeigeMonitor)
+            if (CB_Bildschirme.Items.Count - 1 < Properties.Settings.Default.anzeigeMonitor)
             {
-                cb_Bildschirme.SelectedIndex = 0;
+                CB_Bildschirme.SelectedIndex = 0;
             }
             else
             {
-                cb_Bildschirme.SelectedIndex = Properties.Settings.Default.anzeigeMonitor;
+                CB_Bildschirme.SelectedIndex = Properties.Settings.Default.anzeigeMonitor;
             }
 
             if (Properties.Settings.Default.settingsFormMaximised)
@@ -114,55 +116,55 @@ namespace LiederAnzeige
                 Size = Properties.Settings.Default.settingsFormSize;
             }
 
-            rtb_initialText.Text = Properties.Settings.Default.initalText;
-            la_font.Text = "Font: " + Properties.Settings.Default.TextFont.Name +"; "+ Properties.Settings.Default.TextFont.Size +"pt";
-            la_schriftfarbe.Text = "Schriftfarbe: " + Properties.Settings.Default.TextSchriftFarbe.ToString();
-            la_hintergrundfarbe.Text = "Hintergrundfarbe: " + Properties.Settings.Default.TextHintergrundFarbe.ToString();
+            RTB_initialText.Text = Properties.Settings.Default.initalText;
+            LA_font.Text = "Font: " + Properties.Settings.Default.TextFont.Name +"; "+ Properties.Settings.Default.TextFont.Size +"pt";
+            LA_schriftfarbe.Text = "Schriftfarbe: " + Properties.Settings.Default.TextSchriftFarbe.ToString();
+            LA_hintergrundfarbe.Text = "Hintergrundfarbe: " + Properties.Settings.Default.TextHintergrundFarbe.ToString();
         }
 
-        private void rtb_initialText_TextChanged(object sender, EventArgs e)
+        private void RTB_initialText_TextChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.initalText = rtb_initialText.Text;
-            vorschauAktualliesieren();
+            Properties.Settings.Default.initalText = RTB_initialText.Text;
+            VorschauAktualliesieren();
         }
 
-        private void bt_Fontändern_Click(object sender, EventArgs e)
+        private void BT_Fontändern_Click(object sender, EventArgs e)
         {
             FontDialog fd = new FontDialog();
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextFont = fd.Font;
-                vorschauAktualliesieren();
+                VorschauAktualliesieren();
             }
-            la_font.Text = "Font: " + Properties.Settings.Default.TextFont.Name + "; " + Properties.Settings.Default.TextFont.Size + "pt";
+            LA_font.Text = "Font: " + Properties.Settings.Default.TextFont.Name + "; " + Properties.Settings.Default.TextFont.Size + "pt";
         }
 
-        private void bt_hintergrundfrabeändern_Click(object sender, EventArgs e)
+        private void BT_hintergrundfrabeändern_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
             if (cd.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextHintergrundFarbe = cd.Color;
-                vorschauAktualliesieren();
+                VorschauAktualliesieren();
             }
-            la_hintergrundfarbe.Text = "Hintergrundfarbe: " + Properties.Settings.Default.TextHintergrundFarbe.ToString();
+            LA_hintergrundfarbe.Text = "Hintergrundfarbe: " + Properties.Settings.Default.TextHintergrundFarbe.ToString();
         }
 
-        private void bt_schriftfarbeändern_Click(object sender, EventArgs e)
+        private void BT_schriftfarbeändern_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
             if (cd.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextSchriftFarbe = cd.Color;
-                vorschauAktualliesieren();
+                VorschauAktualliesieren();
             }
-            la_schriftfarbe.Text = "Schriftfarbe: " + Properties.Settings.Default.TextSchriftFarbe.ToString();
+            LA_schriftfarbe.Text = "Schriftfarbe: " + Properties.Settings.Default.TextSchriftFarbe.ToString();
         }
 
 
         
 
-        private void vorschauAktualliesieren()
+        private void VorschauAktualliesieren()
         {
             testpräsi.SetText(Properties.Settings.Default.initalText);
 
@@ -173,11 +175,11 @@ namespace LiederAnzeige
             testpräsi.SetFontColor(Properties.Settings.Default.TextSchriftFarbe);
             testpräsi.SetBackgroundColor(Properties.Settings.Default.TextHintergrundFarbe);
         }
-        private void bt_vorschau_Click(object sender, EventArgs e)
+        private void BT_vorschau_Click(object sender, EventArgs e)
         {
-            if (bt_vorschau.Text == "Vorschau")
+            if (BT_vorschau.Text == "Vorschau")
             {
-                bt_vorschau.Text = "Vorschau beenden";
+                BT_vorschau.Text = "Vorschau beenden";
                 testpräsi.SetText(Properties.Settings.Default.initalText);
 
                 testpräsi.SetTitel("Beispiel Titel");
@@ -189,14 +191,14 @@ namespace LiederAnzeige
                 testpräsi.Show();
                 
             }
-            else if (bt_vorschau.Text == "Vorschau beenden")
+            else if (BT_vorschau.Text == "Vorschau beenden")
             {
-                bt_vorschau.Text = "Vorschau";
+                BT_vorschau.Text = "Vorschau";
                 testpräsi.Hide();
             }
             else
             {
-                bt_vorschau.Text = "Vorschau";
+                BT_vorschau.Text = "Vorschau";
             }
             
 

@@ -1,6 +1,6 @@
 ﻿namespace LiederAnzeige
 {
-    partial class settingsForm
+    partial class SettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bt_show_bildschirme = new System.Windows.Forms.Button();
+            this.BT_show_bildschirme = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_Bildschirme = new System.Windows.Forms.ComboBox();
+            this.CB_Bildschirme = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rtb_initialText = new System.Windows.Forms.RichTextBox();
+            this.RTB_initialText = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.bt_vorschau = new System.Windows.Forms.Button();
-            this.bt_hintergrundfrabeändern = new System.Windows.Forms.Button();
-            this.bt_schriftfarbeändern = new System.Windows.Forms.Button();
-            this.la_hintergrundfarbe = new System.Windows.Forms.Label();
-            this.la_schriftfarbe = new System.Windows.Forms.Label();
-            this.bt_Fontändern = new System.Windows.Forms.Button();
-            this.la_font = new System.Windows.Forms.Label();
+            this.BT_vorschau = new System.Windows.Forms.Button();
+            this.BT_hintergrundfrabeändern = new System.Windows.Forms.Button();
+            this.BT_schriftfarbeändern = new System.Windows.Forms.Button();
+            this.LA_hintergrundfarbe = new System.Windows.Forms.Label();
+            this.LA_schriftfarbe = new System.Windows.Forms.Label();
+            this.BT_Fontändern = new System.Windows.Forms.Button();
+            this.LA_font = new System.Windows.Forms.Label();
+            this.LB_info = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -49,9 +50,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bt_show_bildschirme);
+            this.groupBox1.Controls.Add(this.BT_show_bildschirme);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cb_Bildschirme);
+            this.groupBox1.Controls.Add(this.CB_Bildschirme);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(308, 82);
@@ -59,15 +60,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Leinwand";
             // 
-            // bt_show_bildschirme
+            // BT_show_bildschirme
             // 
-            this.bt_show_bildschirme.Location = new System.Drawing.Point(6, 51);
-            this.bt_show_bildschirme.Name = "bt_show_bildschirme";
-            this.bt_show_bildschirme.Size = new System.Drawing.Size(293, 23);
-            this.bt_show_bildschirme.TabIndex = 2;
-            this.bt_show_bildschirme.Text = "Bildschrimnummern einblenden";
-            this.bt_show_bildschirme.UseVisualStyleBackColor = true;
-            this.bt_show_bildschirme.Click += new System.EventHandler(this.bt_show_bildschirme_Click);
+            this.BT_show_bildschirme.Location = new System.Drawing.Point(6, 51);
+            this.BT_show_bildschirme.Name = "BT_show_bildschirme";
+            this.BT_show_bildschirme.Size = new System.Drawing.Size(293, 23);
+            this.BT_show_bildschirme.TabIndex = 2;
+            this.BT_show_bildschirme.Text = "Bildschrimnummern einblenden";
+            this.BT_show_bildschirme.UseVisualStyleBackColor = true;
+            this.BT_show_bildschirme.Click += new System.EventHandler(this.BT_show_bildschirme_Click);
             // 
             // label1
             // 
@@ -78,22 +79,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Bildschrim für die Präsentation";
             // 
-            // cb_Bildschirme
+            // CB_Bildschirme
             // 
-            this.cb_Bildschirme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Bildschirme.FormattingEnabled = true;
-            this.cb_Bildschirme.Items.AddRange(new object[] {
+            this.CB_Bildschirme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Bildschirme.FormattingEnabled = true;
+            this.CB_Bildschirme.Items.AddRange(new object[] {
             "1: 1920 x 1080"});
-            this.cb_Bildschirme.Location = new System.Drawing.Point(165, 24);
-            this.cb_Bildschirme.Name = "cb_Bildschirme";
-            this.cb_Bildschirme.Size = new System.Drawing.Size(134, 21);
-            this.cb_Bildschirme.TabIndex = 0;
-            this.cb_Bildschirme.DropDown += new System.EventHandler(this.cb_Bildschirme_DropDown);
-            this.cb_Bildschirme.SelectedIndexChanged += new System.EventHandler(this.cb_Bildschirme_SelectedIndexChanged);
+            this.CB_Bildschirme.Location = new System.Drawing.Point(165, 24);
+            this.CB_Bildschirme.Name = "CB_Bildschirme";
+            this.CB_Bildschirme.Size = new System.Drawing.Size(134, 21);
+            this.CB_Bildschirme.TabIndex = 0;
+            this.CB_Bildschirme.DropDown += new System.EventHandler(this.CB_Bildschirme_DropDown);
+            this.CB_Bildschirme.SelectedIndexChanged += new System.EventHandler(this.CB_Bildschirme_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rtb_initialText);
+            this.groupBox2.Controls.Add(this.RTB_initialText);
             this.groupBox2.Location = new System.Drawing.Point(13, 94);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(308, 105);
@@ -101,25 +102,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Default Text";
             // 
-            // rtb_initialText
+            // RTB_initialText
             // 
-            this.rtb_initialText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtb_initialText.Location = new System.Drawing.Point(6, 20);
-            this.rtb_initialText.Name = "rtb_initialText";
-            this.rtb_initialText.Size = new System.Drawing.Size(296, 79);
-            this.rtb_initialText.TabIndex = 0;
-            this.rtb_initialText.Text = "Lobet den HERRN";
-            this.rtb_initialText.TextChanged += new System.EventHandler(this.rtb_initialText_TextChanged);
+            this.RTB_initialText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RTB_initialText.Location = new System.Drawing.Point(6, 20);
+            this.RTB_initialText.Name = "RTB_initialText";
+            this.RTB_initialText.Size = new System.Drawing.Size(296, 79);
+            this.RTB_initialText.TabIndex = 0;
+            this.RTB_initialText.Text = "Lobet den HERRN";
+            this.RTB_initialText.TextChanged += new System.EventHandler(this.RTB_initialText_TextChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.bt_vorschau);
-            this.groupBox3.Controls.Add(this.bt_hintergrundfrabeändern);
-            this.groupBox3.Controls.Add(this.bt_schriftfarbeändern);
-            this.groupBox3.Controls.Add(this.la_hintergrundfarbe);
-            this.groupBox3.Controls.Add(this.la_schriftfarbe);
-            this.groupBox3.Controls.Add(this.bt_Fontändern);
-            this.groupBox3.Controls.Add(this.la_font);
+            this.groupBox3.Controls.Add(this.BT_vorschau);
+            this.groupBox3.Controls.Add(this.BT_hintergrundfrabeändern);
+            this.groupBox3.Controls.Add(this.BT_schriftfarbeändern);
+            this.groupBox3.Controls.Add(this.LA_hintergrundfarbe);
+            this.groupBox3.Controls.Add(this.LA_schriftfarbe);
+            this.groupBox3.Controls.Add(this.BT_Fontändern);
+            this.groupBox3.Controls.Add(this.LA_font);
             this.groupBox3.Location = new System.Drawing.Point(13, 206);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(308, 133);
@@ -127,111 +128,123 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Schrift und Farbe";
             // 
-            // bt_vorschau
+            // BT_vorschau
             // 
-            this.bt_vorschau.Location = new System.Drawing.Point(10, 102);
-            this.bt_vorschau.Name = "bt_vorschau";
-            this.bt_vorschau.Size = new System.Drawing.Size(292, 23);
-            this.bt_vorschau.TabIndex = 6;
-            this.bt_vorschau.Text = "Vorschau";
-            this.bt_vorschau.UseVisualStyleBackColor = true;
-            this.bt_vorschau.Click += new System.EventHandler(this.bt_vorschau_Click);
+            this.BT_vorschau.Location = new System.Drawing.Point(10, 102);
+            this.BT_vorschau.Name = "BT_vorschau";
+            this.BT_vorschau.Size = new System.Drawing.Size(292, 23);
+            this.BT_vorschau.TabIndex = 6;
+            this.BT_vorschau.Text = "Vorschau";
+            this.BT_vorschau.UseVisualStyleBackColor = true;
+            this.BT_vorschau.Click += new System.EventHandler(this.BT_vorschau_Click);
             // 
-            // bt_hintergrundfrabeändern
+            // BT_hintergrundfrabeändern
             // 
-            this.bt_hintergrundfrabeändern.Location = new System.Drawing.Point(227, 73);
-            this.bt_hintergrundfrabeändern.Name = "bt_hintergrundfrabeändern";
-            this.bt_hintergrundfrabeändern.Size = new System.Drawing.Size(75, 23);
-            this.bt_hintergrundfrabeändern.TabIndex = 5;
-            this.bt_hintergrundfrabeändern.Text = "ändern";
-            this.bt_hintergrundfrabeändern.UseVisualStyleBackColor = true;
-            this.bt_hintergrundfrabeändern.Click += new System.EventHandler(this.bt_hintergrundfrabeändern_Click);
+            this.BT_hintergrundfrabeändern.Location = new System.Drawing.Point(227, 73);
+            this.BT_hintergrundfrabeändern.Name = "BT_hintergrundfrabeändern";
+            this.BT_hintergrundfrabeändern.Size = new System.Drawing.Size(75, 23);
+            this.BT_hintergrundfrabeändern.TabIndex = 5;
+            this.BT_hintergrundfrabeändern.Text = "ändern";
+            this.BT_hintergrundfrabeändern.UseVisualStyleBackColor = true;
+            this.BT_hintergrundfrabeändern.Click += new System.EventHandler(this.BT_hintergrundfrabeändern_Click);
             // 
-            // bt_schriftfarbeändern
+            // BT_schriftfarbeändern
             // 
-            this.bt_schriftfarbeändern.Location = new System.Drawing.Point(227, 44);
-            this.bt_schriftfarbeändern.Name = "bt_schriftfarbeändern";
-            this.bt_schriftfarbeändern.Size = new System.Drawing.Size(75, 23);
-            this.bt_schriftfarbeändern.TabIndex = 4;
-            this.bt_schriftfarbeändern.Text = "ändern";
-            this.bt_schriftfarbeändern.UseVisualStyleBackColor = true;
-            this.bt_schriftfarbeändern.Click += new System.EventHandler(this.bt_schriftfarbeändern_Click);
+            this.BT_schriftfarbeändern.Location = new System.Drawing.Point(227, 44);
+            this.BT_schriftfarbeändern.Name = "BT_schriftfarbeändern";
+            this.BT_schriftfarbeändern.Size = new System.Drawing.Size(75, 23);
+            this.BT_schriftfarbeändern.TabIndex = 4;
+            this.BT_schriftfarbeändern.Text = "ändern";
+            this.BT_schriftfarbeändern.UseVisualStyleBackColor = true;
+            this.BT_schriftfarbeändern.Click += new System.EventHandler(this.BT_schriftfarbeändern_Click);
             // 
-            // la_hintergrundfarbe
+            // LA_hintergrundfarbe
             // 
-            this.la_hintergrundfarbe.AutoSize = true;
-            this.la_hintergrundfarbe.Location = new System.Drawing.Point(7, 78);
-            this.la_hintergrundfarbe.Name = "la_hintergrundfarbe";
-            this.la_hintergrundfarbe.Size = new System.Drawing.Size(89, 13);
-            this.la_hintergrundfarbe.TabIndex = 3;
-            this.la_hintergrundfarbe.Text = "Hintergrundfarbe:";
+            this.LA_hintergrundfarbe.AutoSize = true;
+            this.LA_hintergrundfarbe.Location = new System.Drawing.Point(7, 78);
+            this.LA_hintergrundfarbe.Name = "LA_hintergrundfarbe";
+            this.LA_hintergrundfarbe.Size = new System.Drawing.Size(89, 13);
+            this.LA_hintergrundfarbe.TabIndex = 3;
+            this.LA_hintergrundfarbe.Text = "Hintergrundfarbe:";
             // 
-            // la_schriftfarbe
+            // LA_schriftfarbe
             // 
-            this.la_schriftfarbe.AutoSize = true;
-            this.la_schriftfarbe.Location = new System.Drawing.Point(7, 49);
-            this.la_schriftfarbe.Name = "la_schriftfarbe";
-            this.la_schriftfarbe.Size = new System.Drawing.Size(64, 13);
-            this.la_schriftfarbe.TabIndex = 2;
-            this.la_schriftfarbe.Text = "Schriftfarbe:";
+            this.LA_schriftfarbe.AutoSize = true;
+            this.LA_schriftfarbe.Location = new System.Drawing.Point(7, 49);
+            this.LA_schriftfarbe.Name = "LA_schriftfarbe";
+            this.LA_schriftfarbe.Size = new System.Drawing.Size(64, 13);
+            this.LA_schriftfarbe.TabIndex = 2;
+            this.LA_schriftfarbe.Text = "Schriftfarbe:";
             // 
-            // bt_Fontändern
+            // BT_Fontändern
             // 
-            this.bt_Fontändern.Location = new System.Drawing.Point(227, 15);
-            this.bt_Fontändern.Name = "bt_Fontändern";
-            this.bt_Fontändern.Size = new System.Drawing.Size(75, 23);
-            this.bt_Fontändern.TabIndex = 1;
-            this.bt_Fontändern.Text = "ändern";
-            this.bt_Fontändern.UseVisualStyleBackColor = true;
-            this.bt_Fontändern.Click += new System.EventHandler(this.bt_Fontändern_Click);
+            this.BT_Fontändern.Location = new System.Drawing.Point(227, 15);
+            this.BT_Fontändern.Name = "BT_Fontändern";
+            this.BT_Fontändern.Size = new System.Drawing.Size(75, 23);
+            this.BT_Fontändern.TabIndex = 1;
+            this.BT_Fontändern.Text = "ändern";
+            this.BT_Fontändern.UseVisualStyleBackColor = true;
+            this.BT_Fontändern.Click += new System.EventHandler(this.BT_Fontändern_Click);
             // 
-            // la_font
+            // LA_font
             // 
-            this.la_font.AutoSize = true;
-            this.la_font.Location = new System.Drawing.Point(7, 20);
-            this.la_font.Name = "la_font";
-            this.la_font.Size = new System.Drawing.Size(164, 13);
-            this.la_font.TabIndex = 0;
-            this.la_font.Text = "Font: Microsoft Sans Serif; 8,25pt";
+            this.LA_font.AutoSize = true;
+            this.LA_font.Location = new System.Drawing.Point(7, 20);
+            this.LA_font.Name = "LA_font";
+            this.LA_font.Size = new System.Drawing.Size(164, 13);
+            this.LA_font.TabIndex = 0;
+            this.LA_font.Text = "Font: Microsoft Sans Serif; 8,25pt";
+            // 
+            // LB_info
+            // 
+            this.LB_info.AutoSize = true;
+            this.LB_info.Location = new System.Drawing.Point(16, 342);
+            this.LB_info.Name = "LB_info";
+            this.LB_info.Size = new System.Drawing.Size(227, 39);
+            this.LB_info.TabIndex = 3;
+            this.LB_info.Text = "Info:\r\nÄnderungen werden erst nach einem Neustart \r\nder LiederAnzeige wirksam.";
             // 
             // settingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 354);
+            this.ClientSize = new System.Drawing.Size(334, 391);
+            this.Controls.Add(this.LB_info);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(350, 393);
-            this.MinimumSize = new System.Drawing.Size(350, 393);
+            this.MaximumSize = new System.Drawing.Size(350, 430);
+            this.MinimumSize = new System.Drawing.Size(350, 430);
             this.Name = "settingsForm";
             this.Text = "Einstellungen";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.settingsForm_FormClosing);
-            this.Load += new System.EventHandler(this.settingsForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
+            this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button bt_show_bildschirme;
+        private System.Windows.Forms.Button BT_show_bildschirme;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_Bildschirme;
+        private System.Windows.Forms.ComboBox CB_Bildschirme;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox rtb_initialText;
+        private System.Windows.Forms.RichTextBox RTB_initialText;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button bt_Fontändern;
-        private System.Windows.Forms.Label la_font;
-        private System.Windows.Forms.Button bt_vorschau;
-        private System.Windows.Forms.Button bt_hintergrundfrabeändern;
-        private System.Windows.Forms.Button bt_schriftfarbeändern;
-        private System.Windows.Forms.Label la_hintergrundfarbe;
-        private System.Windows.Forms.Label la_schriftfarbe;
+        private System.Windows.Forms.Button BT_Fontändern;
+        private System.Windows.Forms.Label LA_font;
+        private System.Windows.Forms.Button BT_vorschau;
+        private System.Windows.Forms.Button BT_hintergrundfrabeändern;
+        private System.Windows.Forms.Button BT_schriftfarbeändern;
+        private System.Windows.Forms.Label LA_hintergrundfarbe;
+        private System.Windows.Forms.Label LA_schriftfarbe;
+        private System.Windows.Forms.Label LB_info;
     }
 }

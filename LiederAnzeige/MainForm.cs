@@ -20,7 +20,7 @@ namespace LiederAnzeige
         private readonly manuellerText manuelleTexteingabe;
         private readonly BilderForm bilderAnzeige;
         private readonly neuesLiedForm neuesLiederstellen;
-        private readonly settingsForm einstellungen;
+        private readonly SettingsForm einstellungen;
         private readonly DBLiederbücherForm liederbücherForm;
         private readonly DBLieder liederDatenbank;
         private readonly MSSQLDatenbank Datenbank;
@@ -41,7 +41,7 @@ namespace LiederAnzeige
             präsentation = new Präsentation();
             manuelleTexteingabe = new manuellerText(präsentation);
             bilderAnzeige = new BilderForm(präsentation);
-            einstellungen = new settingsForm();
+            einstellungen = new SettingsForm();
             Datenbank = new MSSQLDatenbank(Properties.Settings.Default.DB_LiederAnzeigeConnectionString);
             liederbücherForm = new DBLiederbücherForm();
             liederDatenbank = new DBLieder();
